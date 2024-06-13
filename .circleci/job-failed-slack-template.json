@@ -1,0 +1,54 @@
+{
+  "blocks": [
+    {
+      "type": "header",
+      "text": {
+        "type": "plain_text",
+        "text": "${CIRCLE_JOB^} job failed"
+      }
+    }
+  ],
+  "attachments": [
+    {
+      "color": "#ed0c0c",
+      "blocks": [
+        {
+          "type": "section",
+          "fields": [
+            {
+              "type": "mrkdwn",
+              "text": "*Commiter:*\n${CIRCLE_USERNAME}"
+            },
+            {
+              "type": "mrkdwn",
+              "text": "*Branch:*\n${CIRCLE_BRANCH}"
+            }
+          ],
+          "text": {
+            "type": "mrkdwn",
+            "text": "<https://github.com/minterest-finance/${CIRCLE_PROJECT_REPONAME}/commit/${CIRCLE_SHA1}|_${GIT_COMMIT_DESC}_>"
+          },
+          "accessory": {
+            "type": "image",
+            "image_url": "https://cdn.dribbble.com/users/1003768/screenshots/4756331/media/1f03df6cdc341992b32df4ce7b517b70.png?compress=1&resize=400x300&vertical=top",
+            "alt_text": "failed"
+          }
+        },
+        {
+          "type": "actions",
+          "elements": [
+            {
+              "type": "button",
+              "text": {
+                "type": "plain_text",
+                "emoji": true,
+                "text": "Details"
+              },
+              "url": "${CIRCLE_BUILD_URL}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

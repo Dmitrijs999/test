@@ -1,0 +1,394 @@
+version: 2.1
+orbs:
+  slack: circleci/slack@4.4.4
+
+parameters:
+  version:
+    type: string
+    description: Any git reference (commit SHA, branch name, tag) to deploy contracts from a custom git version. Reference tags to deploy to production or run a rollback.
+    default: ''
+  maintenance:
+    type: string
+    description: true - show maintenance html, false - show app
+    default: ''
+
+commands:
+  pull-charts:
+    description: pull charts repo, build web components and place into FE build folder
+    steps:
+      - run:
+          name: build charts
+          command: |
+            echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > ~/.ssh/config
+            if [[ "$VITE_ENVIRONMENT" == "prod" ]] || [[ "$VITE_ENVIRONMENT" == "pre-prod" ]] || [[ "$VITE_ENVIRONMENT" == "mantle-testnet" ]] || [[ "$VITE_ENVIRONMENT" == "mantle-mainnet" ]]; then
+              git clone --depth 1 git@github.com:minterest-finance/charts.git ~/charts
+            else
+              git clone -b develop --depth 1 git@github.com:minterest-finance/charts.git ~/charts
+            fi
+            cd ~/charts && yarn && yarn build:wc
+      - run: cp -R ~/charts/webpack/build/charts.js ./public
+  build-react-app:
+    description: build react app and cp index.html
+    steps:
+      - run:
+          name: build
+          command: yarn run build
+      - run: cp -R ./build/index.html ./build/main.html
+
+jobs:
+  lint:
+    docker:
+      - image: cimg/node:18.20
+    steps:
+      - checkout
+      - run: yarn install --frozen-lockfile
+      - run: yarn run lint:ci
+    resource_class: medium
+
+  deploy:
+    docker:
+      - image: cimg/node:18.20
+    parameters:
+      environment:
+        type: enum
+        enum: [auto, dev, pre-prod, mantle-testnet, mantle-mainnet, public-demo]
+        default: auto
+    steps:
+      - checkout
+      - run:
+          name: Skip if pull request
+          command: | # Do not run deployment on pull requests
+            if [[ ! -z "$CIRCLE_PULL_REQUESTS" ]]; then
+              circleci-agent step halt
+            fi
+      - when:
+          condition: << pipeline.parameters.version >>
+          steps:
+            - run:
+                name: Change code version based on the pipeline parameters
+                command: |
+                  git checkout << pipeline.parameters.version >>
+                  echo 'export CIRCLE_SHA1='$(git rev-parse HEAD) >> $BASH_ENV
+
+                  if [[ "<< pipeline.parameters.version >>" == v*.*.* ]]; then
+                    echo 'export CIRCLE_TAG=<< pipeline.parameters.version >>' >> $BASH_ENV
+                  fi
+
+                  echo 'export SUCCEEDED_SLACK_TITLE="Successfully rolled back to version << pipeline.parameters.version >>"' >> $BASH_ENV
+      - run:
+          name: Set common environment variables
+          command: |
+            declare -A ENVS_BY_BRANCH=(["develop"]="dev" ["main"]="pre-prod" ["mantle"]="mantle-testnet")
+            declare -A NETWORKS=(["dev"]="ganache" ["pre-prod"]="sepolia" ["mantle-testnet"]="mantleTestnet" ["mantle-mainnet"]="mantleMainnet" ["mantle-mainnet-shadow"]="mantleMainnet" ["public-demo"]="sepolia" ["prod"]="mainnet")
+            declare -A WEBSITE_URLS=(
+              ["dev"]="dev.minterest.xyz"
+              ["pre-prod"]="pre-prod.minterest.xyz"
+              ["mantle-testnet"]="mantle.pre-prod.minterest.xyz"
+              ["mantle-mainnet"]="mantle.minterest.com"
+              ["mantle-mainnet-shadow"]="staging-mantle.prod.minterest.xyz"
+              ["public-demo"]="demo.minterest.com"
+              ["prod"]="app.minterest.com"
+            )
+            declare -A S3_BUCKETS=(
+              ["pre-prod"]="minterest-main-frontend-pre-prod"
+              ["prod"]="minterest-main-frontend-prod"
+              ["mantle-testnet"]="minterest-main-frontend-mantle-testnet"
+              ["mantle-mainnet"]="minterest-main-frontend-mantle-mainnet"
+              ["mantle-mainnet-shadow"]="minterest-main-frontend-mantle-mainnet-staging"
+            )
+
+            if [[ "<< parameters.environment >>" != "auto" ]]; then
+              ENVIRONMENT=<< parameters.environment >>
+            elif [[ -z "$CIRCLE_TAG" ]]; then
+              ENVIRONMENT=${ENVS_BY_BRANCH[<< pipeline.git.branch >>]}
+            elif [[ "$CIRCLE_TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+(-staging)?$ ]]; then
+              ENVIRONMENT=prod
+            elif [[ "$CIRCLE_TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+-mantle$ ]]; then
+              ENVIRONMENT=mantle-mainnet
+            elif [[ "$CIRCLE_TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+-mantle-staging$ ]]; then
+              ENVIRONMENT=mantle-mainnet-shadow
+            else
+              echo "Unknown tag format: $CIRCLE_TAG"
+              exit 1
+            fi
+
+            S3_BUCKET=${S3_BUCKETS[$ENVIRONMENT]}
+            WEBSITE_URL=https://${WEBSITE_URLS[$ENVIRONMENT]}
+
+            echo 'export NODE_OPTIONS=--max-old-space-size=4096' >> $BASH_ENV
+            echo 'export VITE_ENVIRONMENT='${ENVIRONMENT} >> $BASH_ENV
+            echo 'export VITE_REVISION='<< pipeline.git.revision >> >> $BASH_ENV
+            echo 'export VITE_VERSION='$(git describe --tags --always) >> $BASH_ENV
+            echo 'export VITE_NETWORK='${NETWORKS[$ENVIRONMENT]} >> $BASH_ENV
+            echo 'export VITE_APPSIGNAL_PUSH='${APPSIGNAL_PUSH_KEY} >> $BASH_ENV
+            echo 'export DEPLOYMENT_SUCCEEDED_SLACK_TEMPLATE=$(cat .circleci/deployment-succeeded-slack-template.json)' >> $BASH_ENV
+            echo 'export JOB_FAILED_SLACK_TEMPLATE=$(cat .circleci/job-failed-slack-template.json)' >> $BASH_ENV
+            echo 'export GIT_COMMIT_DESC=$(git log --format=oneline -n 1 --pretty=format:%s $CIRCLE_SHA1)' >> $BASH_ENV
+            echo 'export S3_BUCKET='${S3_BUCKET} >> $BASH_ENV
+            echo 'export WEBSITE_URL='${WEBSITE_URL} >> $BASH_ENV
+            echo 'export VITE_WEBSITE_URL='${WEBSITE_URL} >> $BASH_ENV
+
+            echo "Deploying $ENVIRONMENT app update to ${S3_BUCKET}..."
+            echo "VITE_ENVIRONMENT=${VITE_ENVIRONMENT}"
+            echo "VITE_NETWORK=${VITE_NETWORK}"
+      - run: yarn install --frozen-lockfile
+      - run:
+          name: install awscli
+          command: sudo apt update && sudo apt install awscli
+      - pull-charts
+      - build-react-app
+      - run:
+          name: upload sourcemaps to appsignal
+          command: yarn sourcemaps:upload
+          no_output_timeout: 30m
+      - run: |
+          if [[ "$VITE_ENVIRONMENT" == "prod" || "$VITE_ENVIRONMENT" == "mantle-mainnet" ]]; then
+            # Do not clean up old files for production environment to avoid downtime
+            aws s3 cp build s3://${S3_BUCKET} --recursive
+          else
+            aws s3 sync build s3://${S3_BUCKET} --delete
+          fi
+      - slack/notify:
+          event: fail
+          channel: 'tech-front-end'
+          template: JOB_FAILED_SLACK_TEMPLATE
+      - slack/notify:
+          event: pass
+          channel: 'deployment-minterest'
+          template: DEPLOYMENT_SUCCEEDED_SLACK_TEMPLATE
+    resource_class: medium+
+
+  temp-env-deploy:
+    docker:
+      - image: cimg/node:18.20
+    steps:
+      - checkout
+      - run:
+          name: Set common environment variables
+          command: |
+            PATH_PREFIX=${CIRCLE_BRANCH//[^[:alnum:]]/-}
+
+            echo 'export NODE_OPTIONS=--max-old-space-size=4096' >> $BASH_ENV
+            echo 'export PATH_PREFIX='${PATH_PREFIX} >> $BASH_ENV
+            echo 'export VITE_REVISION='<< pipeline.git.revision >> >> $BASH_ENV
+            echo 'export VITE_VERSION='${CIRCLE_SHA1:0:6} >> $BASH_ENV
+            echo 'export VITE_ENVIRONMENT=dev' >> $BASH_ENV
+            echo 'export VITE_NETWORK=ganache' >> $BASH_ENV
+            echo 'export VITE_PUBLIC_URL=/'${PATH_PREFIX} >> $BASH_ENV
+            echo 'export S3_BUCKET=minterest-main-frontend-temp' >> $BASH_ENV
+            echo 'export WEBSITE_URL=https://temp.minterest.xyz/'${PATH_PREFIX} >> $BASH_ENV
+      - run: yarn install --frozen-lockfile
+      - run:
+          name: install awscli
+          command: sudo apt update && sudo apt install awscli
+      - pull-charts
+      - build-react-app
+      - run: aws s3 sync build s3://${S3_BUCKET}/${PATH_PREFIX} --delete
+      - run: bash .circleci/publish-github-deployment.sh
+    resource_class: medium+
+
+  maintenance-mode:
+    docker:
+      - image: cimg/node:18.20
+    steps:
+      - checkout
+      - when:
+          condition: << pipeline.parameters.version >>
+          steps:
+            - run:
+                name: Change code version based on the pipeline parameters
+                command: |
+                  git checkout << pipeline.parameters.version >>
+                  echo 'export CIRCLE_SHA1='$(git rev-parse HEAD) >> $BASH_ENV
+
+                  if [[ "<< pipeline.parameters.version >>" == v*.*.* ]]; then
+                    echo 'export CIRCLE_TAG=<< pipeline.parameters.version >>' >> $BASH_ENV
+                  fi
+      - run:
+          name: Set common environment variables
+          command: |
+            declare -A ENVS_BY_BRANCH=(["develop"]="dev" ["main"]="pre-prod" ["mantle"]="mantle-testnet")
+            PATH_PREFIX=${CIRCLE_BRANCH//[^[:alnum:]]/-}
+
+            if [[ -z "$CIRCLE_TAG" ]]; then
+              ENVIRONMENT=${ENVS_BY_BRANCH[<< pipeline.git.branch >>]}
+            elif [[ "$CIRCLE_TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+              ENVIRONMENT=prod
+            elif [[ "$CIRCLE_TAG" =~ ^v[0-9]+\.[0-9]+\.[0-9]+-mantle$ ]]; then
+              ENVIRONMENT=mantle-mainnet
+            else
+              echo "Unknown tag format: $CIRCLE_TAG"
+              exit 1
+            fi
+
+            if [[ << pipeline.git.branch >>  == "develop" ]] || [[ << pipeline.git.branch >>  == "main" ]] || [[ << pipeline.git.branch >> == "mantle" ]]; then
+              echo 'export S3_URL=s3://minterest-main-frontend-'${ENVIRONMENT} >> $BASH_ENV
+            else
+              echo 'export S3_URL=s3://minterest-main-frontend-temp/'${PATH_PREFIX} >> $BASH_ENV
+            fi
+
+      - run:
+          name: install awscli
+          command: sudo apt update && sudo apt install awscli
+      - run:
+          name: replace html
+          command: |
+            if [[ << pipeline.parameters.maintenance >> == true ]]; then
+              aws s3 cp ${S3_URL}/maintenance.html ${S3_URL}/index.html
+            else
+              aws s3 cp ${S3_URL}/main.html ${S3_URL}/index.html
+            fi
+    resource_class: small
+
+workflows:
+  version: 2
+  main:
+    when:
+      not:
+        or:
+          - matches: # Do not run on rollback for production environment
+              pattern: /^v.*/
+              value: << pipeline.parameters.version >>
+          - matches: # Do not run on maintenance changing
+              pattern: /^(true|false)/
+              value: << pipeline.parameters.maintenance >>
+    jobs:
+      - lint
+      - deploy:
+          context:
+            - slack-secrets
+            - aws
+          filters:
+            branches:
+              only: [develop, main, mantle]
+          requires:
+            - lint
+      - temp-env-deploy:
+          context:
+            - slack-secrets
+            - aws
+            - github
+          filters:
+            branches:
+              ignore: [develop, main, mantle]
+          requires:
+            - lint
+
+  deploy-to-ethereum-mainnet:
+    when:
+      and:
+        - or:
+            - matches: # Run either on new git tag release
+                pattern: /^v[0-9]+\.[0-9]+\.[0-9]+$/ # e.g. `v{number}.{number}.{number}`: v1.2.3, etc.
+                value: << pipeline.git.tag >>
+            - matches: # Or on production rollback to the previous git tag
+                pattern: /^^v[0-9]+\.[0-9]+\.[0-9]+$/
+                value: << pipeline.parameters.version >>
+        - not:
+            matches: # Do not run on maintenance changing
+              pattern: /^(true|false)/
+              value: << pipeline.parameters.maintenance >>
+    jobs:
+      - deploy:
+          name: ethereum-mainnet-deploy
+          context:
+            - slack-secrets
+            - aws-prod
+          filters:
+            tags:
+              only: /.*/
+            branches:
+              only: [main]
+      - deploy:
+          name: public-demo-deploy
+          environment: public-demo
+          context:
+            - slack-secrets
+            - aws
+          filters:
+            tags:
+              only: /.*/
+            branches:
+              only: [main]
+
+  deploy-to-mantle-mainnet:
+    when:
+      and:
+        - or:
+            - matches: # Run either on new git tag release
+                pattern: /^v[0-9]+\.[0-9]+\.[0-9]+-mantle$/ # e.g. `v{number}.{number}.{number}-mantle`: v1.2.3-mantle, etc.
+                value: << pipeline.git.tag >>
+            - matches: # Or on production rollback to the previous git tag
+                pattern: /^v[0-9]+\.[0-9]+\.[0-9]+-mantle$/
+                value: << pipeline.parameters.version >>
+        - not:
+            matches: # Do not run on maintenance changing
+              pattern: /^(true|false)/
+              value: << pipeline.parameters.maintenance >>
+    jobs:
+      - deploy:
+          name: mantle-mainnet-deploy
+          context:
+            - slack-secrets
+            - aws-prod
+          filters:
+            tags:
+              only: /.*/
+            branches:
+              only: [mantle]
+
+
+  deploy-to-mantle-mainnet-staging:
+    when:
+      and:
+        - or:
+            - matches: # Run either on new git tag release
+                pattern: /^v[0-9]+\.[0-9]+\.[0-9]+-mantle-staging$/ # e.g. `v{number}.{number}.{number}-mantle`: v1.2.3-mantle, etc.
+                value: << pipeline.git.tag >>
+            - matches: # Or on production rollback to the previous git tag
+                pattern: /^v[0-9]+\.[0-9]+\.[0-9]+-mantle-staging$/
+                value: << pipeline.parameters.version >>
+        - not:
+            matches: # Do not run on maintenance changing
+              pattern: /^(true|false)/
+              value: << pipeline.parameters.maintenance >>
+    jobs:
+      - deploy:
+          name: mantle-mainnet-staging-deploy
+          context:
+            - slack-secrets
+            - aws-prod
+          filters:
+            tags:
+              only: /.*/
+            branches:
+              only: [mantle]
+
+  switch-maintenance:
+    when:
+      and:
+        - matches:
+            pattern: /^(true|false)/
+            value: << pipeline.parameters.maintenance >>
+        - not:
+            matches:
+              pattern: /^v[0-9]+\.[0-9]+\..*/
+              value: << pipeline.parameters.version >>
+    jobs:
+      - maintenance-mode:
+          context:
+            - aws
+
+  switch-maintenance-prod:
+    when:
+      and:
+        - matches:
+            pattern: /^(true|false)/
+            value: << pipeline.parameters.maintenance >>
+        - matches:
+            pattern: /^v[0-9]+\.[0-9]+\..*/
+            value: << pipeline.parameters.version >>
+    jobs:
+      - maintenance-mode:
+          context:
+            - aws-prod
