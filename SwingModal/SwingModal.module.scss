@@ -1,0 +1,38 @@
+.swingButton {
+    width: 160px;
+    height: 36px;
+}
+
+.modalOverlay {
+    z-index: 1500;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inset: 0;
+    position: fixed;
+}
+
+.modalContent {
+    & > div:last-child {
+        width: 384px;
+
+        & > div {
+            max-width: 100%;
+        }
+    }
+}
+
+.buttonWrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: -10px;
+}
+
+.closeButton {
+    width: 16px;
+    font-size: 16px;
+    color: #c0c5cb;
+    background-color: transparent;
+    border: none;
+}

@@ -1,0 +1,30 @@
+.wrapper {
+    width: 204px;
+    position: absolute;
+    margin-top: 64px;
+    z-index: 12;
+    // overrides ui-kit, thus !important
+    padding-top: 24px !important;
+    padding-bottom: 24px !important;
+    gap: 16px;
+}
+
+.listItem {
+    color: #a3a7b6;
+    > svg {
+        margin-right: 10px;
+    }
+    > svg > path {
+        fill: #a3a7b6;
+    }
+
+    &:hover {
+        color: #fcfdff;
+        > svg {
+            margin-right: 10px;
+        }
+        > svg > path {
+            fill: #fcfdff;
+        }
+    }
+}

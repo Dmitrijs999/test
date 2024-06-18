@@ -1,0 +1,28 @@
+/* Blocknative styles */
+:root {
+    --onboard-account-select-modal-z-index: 1500;
+    --onboard-modal-z-index: 1400;
+    --onboard-font-size-3: 24px;
+    --onboard-font-size-5: 16px;
+    --onboard-font-size-6: 14px;
+    --background-color: #fcfdff;
+    --text-color: #222a34;
+    --border-color: #e9eaee;
+    --accent-background: #f4f5f9;
+    --accent-color: #6f61e5;
+    --accent-color-hover: #f4f5f9;
+    --secondary-text-color: #e9eaee;
+    --onboard-connect-sidebar-background: var(--accent-background);
+    --onboard-close-button-background: var(--accent-background);
+    --onboard-connect-sidebar-color: var(--text-color);
+    --onboard-connect-sidebar-progress-background: var(--secondary-text-color);
+    --onboard-connect-sidebar-progress-color: var(--accent-color);
+    --onboard-connect-header-background: var(--background-color);
+    --onboard-connect-header-color: var(--text-color);
+    --onboard-main-scroll-container-background: var(--background-color);
+    --onboard-link-color: var(--accent-color);
+    --onboard-wallet-button-background: var(--background-color);
+    --onboard-wallet-button-background-hover: var(--accent-color-hover);
+    --onboard-wallet-button-border-color: var(--border-color);
+    --onboard-wallet-app-icon-border-color: var(--border-color);
+}

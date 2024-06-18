@@ -1,0 +1,30 @@
+.wrapper {
+    background: #2e343a;
+    margin-right: 24px;
+    margin-left: 24px;
+    border: 1px solid rgba(202, 208, 214, 0.08);
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding: 16px;
+}
+
+.listItem {
+    color: #a3a7b6;
+    > svg {
+        margin-right: 10px;
+    }
+    > svg > path {
+        fill: #a3a7b6;
+    }
+
+    &:hover {
+        color: #fcfdff;
+        > svg {
+            margin-right: 10px;
+        }
+        > svg > path {
+            fill: #fcfdff;
+        }
+    }
+}
