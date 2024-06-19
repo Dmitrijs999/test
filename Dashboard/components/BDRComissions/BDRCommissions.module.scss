@@ -1,0 +1,26 @@
+@import 'src/styles/variables';
+@import '@minterest-finance/ui-kit/dist/styles/variables';
+.tableFooterContainer {
+    padding-top: 24px;
+    text-align: right;
+    display: flex;
+    justify-content: space-between;
+}
+.totalReward {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    svg {
+        margin-right: 8px;
+    }
+}
+.addressCell {
+    display: flex;
+    align-items: center;
+    svg {
+        margin-right: 8px;
+        @include breakpoint(sm) {
+            display: none;
+        }
+    }
+}

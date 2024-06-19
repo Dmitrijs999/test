@@ -1,0 +1,7 @@
+.label {
+    color: #595d6c;
+    transition: color 0.15s linear;
+    &:hover {
+        color: #222a34;
+    }
+}

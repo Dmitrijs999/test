@@ -1,0 +1,136 @@
+@import 'src/styles/variables';
+@import '@minterest-finance/ui-kit/dist/styles/variables';
+
+.container {
+    max-width: 1200px;
+    min-height: calc(100vh - 144px);
+}
+
+.voteWrapper {
+    width: 100%;
+    margin-top: 40px;
+
+    @include breakpoint(md) {
+        margin-top: 20px;
+    }
+
+    @include breakpoint(sm) {
+        margin-top: 0;
+    }
+
+    .voteLine {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        & .title {
+            color: #fcfdff;
+        }
+
+        .buttonWrapper {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            .button {
+                width: 87px;
+                box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.34),
+                    inset 0.3px 0.5px 0px rgba(255, 255, 255, 0.25);
+                border-radius: 2px;
+                padding: 8px 0;
+
+                &:hover:not(:disabled) {
+                    filter: brightness(1.1);
+                }
+
+                &.green {
+                    background: #5db14f;
+                    color: #fbfcfe;
+                }
+
+                &.gray {
+                    color: #222a34;
+                    background: linear-gradient(113.87deg, #dde1ec 0.34%, #c2cad6 99.13%);
+                }
+
+                &.red {
+                    background: #e46179;
+                    color: #fbfcfe;
+                }
+
+                &:disabled,
+                &.disabled {
+                    background: rgb(233, 234, 238);
+                    color: rgb(89, 93, 108);
+                    cursor: not-allowed;
+
+                    &:hover {
+                        filter: none;
+                    }
+                }
+            }
+        }
+    }
+
+    .proposedByLine {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 24px;
+
+        .proposedByText {
+            color: #a3a7b6;
+        }
+        .userNameText {
+            color: #8a6cff;
+            margin-left: 2px;
+        }
+    }
+}
+
+.detailsCard {
+    margin-top: 80px;
+
+    @include breakpoint(md) {
+        margin-top: 40px;
+    }
+    @include breakpoint(sm) {
+        margin-top: 20px;
+    }
+}
+
+.detailsContent {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px;
+    background: #f4f5f9;
+    border: 1px solid rgba(83, 110, 135, 0.08);
+    border-radius: 2px;
+}
+
+.text {
+    color: #222a34;
+    margin-top: 10px;
+
+    @include breakpoint(md, sm) {
+        margin-top: 0;
+    }
+
+    &.withoutMargin {
+        margin-top: 0;
+    }
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & svg,
+    & svg path {
+        fill: #fff;
+    }
+}

@@ -1,0 +1,56 @@
+@import '@minterest-finance/ui-kit/dist/styles/variables';
+
+.headerRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    padding-left: 32px;
+    padding-right: 32px;
+
+    @include breakpoint(md) {
+        margin-bottom: 24px;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    @include breakpoint(sm) {
+        margin-bottom: 16px;
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+}
+
+.totalRow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .title {
+        color: #595d6c !important;
+        margin-right: 4px;
+    }
+
+    .usd {
+        color: #595d6c !important;
+    }
+
+    .total {
+        color: #222a34 !important;
+    }
+}
+
+.deltaWrapper {
+    display: flex;
+    align-items: center;
+    margin-right: -4px;
+
+    .text {
+        color: #5db14f;
+    }
+
+    .isNegative {
+        color: #e46179;
+    }
+}

@@ -1,0 +1,28 @@
+.linkIcon {
+    path {
+        fill: #222a34;
+    }
+}
+
+.noRowsOverlay {
+    background: #f4f5f9;
+    border: 1px solid rgba(83, 110, 135, 0.08);
+    border-radius: 2px;
+    padding: 8px 16px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    .warningIcon {
+        min-width: 20px;
+        min-height: 20px;
+    }
+
+    .text {
+        margin-left: 8px;
+    }
+}
+
+.hashLabel {
+    color: #222a34;
+}
