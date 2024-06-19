@@ -1,0 +1,41 @@
+@import '@minterest-finance/ui-kit/dist/styles/variables';
+
+.icon {
+    width: 40px;
+    height: 40px;
+}
+
+.popup {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.titleRow {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 9px;
+    @include breakpoint(sm) {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    @include breakpoint(md) {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+}
+
+.footerText {
+    color: #8b8f9e;
+}
+
+.footerContent {
+    gap: 16px;
+}
+
+.padder {
+    padding-bottom: 32px;
+    @include breakpoint(sm) {
+        padding-bottom: 16px;
+    }
+}

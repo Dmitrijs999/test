@@ -1,0 +1,94 @@
+@import '@minterest-finance/ui-kit/dist/styles/variables';
+
+.successAlert > div {
+  width: 100%;
+}
+
+.generalAlert > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popup {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  padding-bottom: 0 !important;
+  max-height: 100vh;
+  overflow-y: auto;
+  @media (max-width: 766px) {
+    width: 380px !important;
+  }
+}
+
+.titleRow {
+  padding-left: 32px;
+  padding-right: 32px;
+  @include breakpoint(sm) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  @include breakpoint(md) {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 16px;
+
+  .switchIconBlock {
+    margin: 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #536e8714;
+    padding: 10px;
+    box-shadow: 0px 3px 5px 0px #0000000f;
+    background: linear-gradient(0deg, #fbfcfe, #fbfcfe),
+      linear-gradient(0deg, rgba(83, 110, 135, 0.08), rgba(83, 110, 135, 0.08));
+
+    &:disabled {
+      cursor: default;
+      path {
+        fill: #8b8f9e !important;
+      }
+    }
+  }
+
+  .description {
+    margin: 32px 10px 0 10px;
+  }
+  .descriptionBlock {
+    margin-top: 10px;
+  }
+  .bridgeButton {
+    margin: 32px 0;
+  }
+
+  .poweredByBlock {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .poweredByBlockMobile {
+    margin-bottom: 80px;
+  }
+}
+.headerLinks{
+  display: flex;
+  justify-content: flex-start;
+  gap:8px
+}
+.labelButton{
+  span{
+    font-size: 14px !important;
+    font-weight: 400 !important;
+  }
+ 
+}

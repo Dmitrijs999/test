@@ -1,0 +1,56 @@
+.marketConfirmationWrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon {
+    width: 49px;
+    height: 49px;
+    margin-top: 16px;
+}
+
+.responseDescription {
+    text-align: center;
+    color: #fcfdff;
+    margin-top: 24px;
+}
+
+.alert {
+    width: 100%;
+    z-index: 11;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.linkText {
+    color: #6f61e5;
+    margin-right: 4px;
+}
+
+.actionWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgba(202, 208, 214, 0.08);
+    margin-top: 30px;
+    padding: 8px 16px;
+    background: #21272d;
+    width: 100%;
+    cursor: pointer;
+}
+
+.iconWrapper {
+    display: flex;
+    margin: 0 10px;
+}
+
+.actionText {
+    display: flex;
+    align-items: center;
+}

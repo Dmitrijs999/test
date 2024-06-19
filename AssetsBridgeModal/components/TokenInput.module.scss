@@ -1,0 +1,42 @@
+@import '@minterest-finance/ui-kit/dist/styles/variables';
+
+.tokenInputWrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(83, 110, 135, 0.0784313725);
+  border-radius: 4px;
+  padding: 8px 16px;
+}
+
+.tokenInput {
+  border: none;
+  outline: none;
+  font-family: 'Saira';
+  text-transform: capitalize;
+  flex-grow: 1;
+  text-align: left;
+  font-size: 17px;
+  background: none;
+  width: 100%;
+}
+
+.maxButton {
+  border: none;
+  color: #016b72;
+  background: none;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 4px;
+  margin-right: 5px;
+  margin-left: auto;
+}
+
+.tooltip {
+  color: white;
+  border: 1px solid rgb(253, 1, 1) !important;
+  span {
+    color: red !important;
+  }
+}

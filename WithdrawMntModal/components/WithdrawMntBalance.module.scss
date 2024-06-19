@@ -1,0 +1,27 @@
+.row {
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.iconRow {
+    align-items: center;
+    gap: 4px;
+}
+.container {
+    width: 100%;
+    gap: 8px;
+}
+.col {
+    gap: 4px;
+}
+.icon {
+    width: 16px;
+    height: 16px;
+}
+
+.title {
+    color: #222a34;
+}
+.value {
+    color: #595d6c;
+}
