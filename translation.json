@@ -1,0 +1,1231 @@
+{
+  "auditBlock": {
+    "footer": "Audited by"
+  },
+  "autostakingModal": {
+    "automaticStakingStart": "Minterest protocol will start automatically staking your MINTY rewards.",
+    "automaticStakingStop": "Minterest protocol will stop automatically staking your MINTY rewards. NB! In Private Launch stage it is not possible to disable governance participation.",
+    "button": {
+      "turnOff": "Turn off",
+      "turnOn": "Turn on"
+    },
+    "confirm": "Confirm",
+    "confirmTransaction": "Please confirm the transaction in your wallet.",
+    "internalError": "An internal error JSON-RPC has occurred. Please try again.",
+    "signing": "Please confirm the transaction in your wallet.",
+    "success": "Autostaking has been enabled successfully!",
+    "successMessageOff": "Autostaking has been disabled successfully!",
+    "successMessageOn": "Autostaking has been enabled successfully!",
+    "titleOff": "Disable governance",
+    "titleOn": "Enable governance",
+    "transactionFailed": "Transaction failed!",
+    "unstakeWarning": "CAUTION! This transaction will unstake all your staked MINTY.  It will also restart the clock for your loyalty rewards boost, reducing any future buyback rewards."
+  },
+  "basicOperations": {
+    "borrow": {
+      "buttonTitle": "Borrow",
+      "modalTitle": "Borrow"
+    },
+    "footer": {
+      "borrowingApr": "borrowing APR",
+      "borrowingRates": "Borrowing rates",
+      "lendingApy": "supply APY",
+      "lendingRates": "Supply rates",
+      "mntRewardsApy": "MINTY rewards APY",
+      "mntRewardsApyTooltip": "MINTY rewards APY is the projected Annual Percentage Yield (APY) in MINTY tokens given as a reward for supplying this position",
+      "totalNetApywithRewards": "Total Net APY with rewards"
+    },
+    "lend": {
+      "buttonTitle": "Supply",
+      "modalTitle": "Supply"
+    },
+    "maxTransactionFee": "Est. TX fee:",
+    "repay": {
+      "buttonTitle": "Repay",
+      "modalTitle": "Repay"
+    },
+    "sideBar": {
+      "borrowBalance": "Borrow balance",
+      "collateralRatio": "collateral ratio",
+      "collateralRatio0": "A zero % collateral ratio portfolio position is conservative and safe from liquidation risk, as it is impossible for asset market value movements to move this portfolio into an undercollateralized state. ",
+      "collateralRatio0-10": "This low Collateral Ratio portfolio position is conservative and generally safe from liquidation risk, as it would take asset market value movements greater than those seen in recent years to move this portfolio into an undercollateralized state. ",
+      "collateralRatio10-20": "This low collateral ratio portfolio position is conservative and mostly safe from liquidation risk, as it would take asset market value movements greater than those seen in recent years to move this portfolio into an undercollateralized state. ",
+      "collateralRatio100": "URGENT! This portfolio is undercollateralized, with collateral ratio beyond allowed limits, and will likely have a liquidation event at any moment. You may be able to avoid liquidation by quickly repaying borrowed assets or supplying more assets to return this portfolio within allowed limits. ",
+      "collateralRatio20-30": "This moderate Collateral Ratio portfolio position is fairly safe from liquidation risk, as only large market value movements could move this portfolio into an undercollateralized state. ",
+      "collateralRatio30-40": "This moderate collateral ratio portfolio position is fairly safe from liquidation risk, as only large market value movements could move this portfolio into an undercollateralized state. ",
+      "collateralRatio40-50": "This moderate Collateral Ratio portfolio position has moderate risk of liquidation, as only large market value movements could move this portfolio into an undercollateralized state. ",
+      "collateralRatio50-60": "This mid-range Collateral Ratio portfolio position has moderate risk of liquidation, as only large market value movements could move this portfolio into an undercollateralized state. Monitor large market movements that may effect collateral ratios.",
+      "collateralRatio60-70": "This moderately high collateral ratio portfolio position has risk of liquidation, as large market value movements could move this portfolio into an undercollateralized state. Monitor market movements that may effect collateral ratios.",
+      "collateralRatio70-80": "This moderately high Collateral Ratio portfolio position has risk of liquidation, as market value movements could move this portfolio into an undercollateralized state. Monitor closely for market movements that may effect collateral ratios and cause a liquidation event.",
+      "collateralRatio80-90": "This high Collateral Ratio portfolio position has risk of liquidation, as market value movements could move this portfolio into an undercollateralized state. Monitor closely for market movements that may effect collateral ratios and cause a liquidation event.",
+      "collateralRatio90-97": "This high collateral ratio portfolio position has substantial risk of liquidation, as market value movements could move this portfolio into an undercollateralized state. Monitor closely for market movements that may effect collateral ratios and cause a liquidation event.",
+      "collateralRatio97-100": "This portfolio has very high collateral ratio with substantial risk of liquidation, as even small market movements could move this portfolio into an undercollateralized state. To reduce risk, repay borrowed assets or supply more assets to bring this portfolio to lower collateral ratio.        ",
+      "collateralRatioTooltip": "Collateral ratio is the ratio of your current total supplied collateral that you are currently borrowing.",
+      "lendBalance": "Supply balance",
+      "netApy": "Net apy",
+      "porfolioImpact": "Portfolio impact"
+    },
+    "statusHeader": {
+      "exploreTransaction": "See transaction in block explorer"
+    },
+    "withdraw": {
+      "buttonTitle": "Withdraw",
+      "modalTitle": "Withdraw"
+    }
+  },
+  "blocknative": {
+    "connect": {
+      "connectedWallet": {
+        "header": "Connection Successful",
+        "mainText": "Connected",
+        "sidebar": {
+          "paragraph": "Your wallet is now connected to {app}",
+          "subheading": "Connection Successful!"
+        }
+      },
+      "connectingWallet": {
+        "header": "{connectionRejected, select, false {Connecting to {wallet}...} other {Connection Rejected}}",
+        "mainText": "Connecting...",
+        "paragraph": "Make sure to select all accounts that you want to grant access to.",
+        "previousConnection": "{wallet} already has a pending connection request, please open the {wallet} app to login and connect.",
+        "primaryButton": "Back to wallets",
+        "rejectedCTA": "Click here to try again",
+        "rejectedText": "Connection Rejected!",
+        "sidebar": {
+          "paragraph": "Please approve the connection in your wallet and authorize access to continue.",
+          "subheading": "Approve Connection"
+        }
+      },
+      "selectingWallet": {
+        "agreement": {
+          "agree": "I agree to the",
+          "and": "and",
+          "privacy": "Privacy Policy",
+          "terms": "Terms of Use"
+        },
+        "header": "Available Wallets",
+        "installWallet": "You do not have any wallets installed that {app} supports, please use a supported wallet",
+        "recommendedWalletsPart1": "{app} only supports",
+        "recommendedWalletsPart2": "on this platform. Please use or install one of the supported wallets to continue",
+        "sidebar": {
+          "heading": "Get Started",
+          "paragraph": "By proceeding, you understand & agree to the Terms of Use",
+          "subheading": "Connect your wallet"
+        }
+      }
+    }
+  },
+  "boostTooltips": {
+    "borrow": {
+      "lp": "Additional special invitation boost applied to the MINTY rewards APY given as a reward for borrowing this position",
+      "nft": "Additional NFT boost applied to the MINTY rewards APY given as a reward for borrowing this position"
+    },
+    "supply": {
+      "lp": "Additional special invitation boost applied to the MINTY rewards APY given as a reward for supplying this position",
+      "nft": "Additional NFT boost applied to the MINTY rewards APY given as a reward for supplying this position"
+    }
+  },
+  "borrowUserStateAlert": {
+    "noTotalSupply": "Supply assets to increase your borrow capacity.",
+    "totalSupply": {
+      "collateral": {
+        "collateralNotEnabledOnTaregetMarket": "This transaction will enable {{assetName}} as collateral."
+      },
+      "noCollateral": {
+        "noSupply": "To increase your borrow capacity, enable supplied assets as collateral on your Dashboard.",
+        "supply": "This transaction will enable {{assetName}} as collateral."
+      }
+    }
+  },
+  "charts": {
+    "axisNames": {
+      "apy": "APY",
+      "utilisation": "Utilisation"
+    },
+    "bar": {
+      "borrowedTitle": "Borrowed",
+      "lentTitle": "Supplied"
+    },
+    "historicalYield": {
+      "title": "{{market}} hIstorical yield"
+    },
+    "interestRate": {
+      "subtitle": "APY vs. Utilization",
+      "title": "INTEREST RATE MODEL"
+    },
+    "labels": {
+      "borrowAPR": "Market Borrow APR",
+      "borrowAPRShort": "APR",
+      "collateralRatio": "Collateral Ratio",
+      "collateralRatioShort": "Col. Ratio",
+      "lendAPY": "Market Supply APY",
+      "lendAPYShort": "APY",
+      "netAPY": "Market Net APY",
+      "netAPYShort": "Net APY",
+      "rewardsAPY": "MINTY Rewards APY",
+      "rewardsAPYShort": "APY",
+      "totalBorrowInUSD": "Total borrow in USD",
+      "totalBorrowInUSDShort": "Borrow $",
+      "totalLentInUSD": "Total supply in USD",
+      "totalLentInUSDShort": "Supply $",
+      "totalNetApy": "Total Net APY",
+      "totalNetApyShort": "Tot. Net APY",
+      "totalReturn": {
+        "btc": "Total return in BTC",
+        "btcShort": "BTC earned",
+        "usd": "Total return in USD",
+        "usdShort": "USD earned"
+      }
+    },
+    "noData": "No data",
+    "supplyBorrow": {
+      "title": "TOTAL SUPPLY $ vs BORROW $"
+    },
+    "yourYield": {
+      "title": "YOUR YIELD"
+    }
+  },
+  "collateralModal": {
+    "button": {
+      "turnOff": "Disable {{assetName}} as collateral",
+      "turnOn": "Use {{assetName}} as collateral"
+    },
+    "descriptionOff": "This asset will no longer be used towards your borrowing limit, and can't be seized in liquidation.",
+    "descriptionOn": "Each asset used as collateral increases your borrowing limit. Be careful, this can subject the asset to being  seized in liquidation.",
+    "disableCollateralWarning": "Disabling this asset as collateral affects your borrowing power and Health Factor",
+    "internalError": "An internal error JSON-RPC has occurred. Please try again.",
+    "learnMore": "Learn more",
+    "successMessageOff": "Your {{assetName}} will not be used as collateral anymore.",
+    "successMessageOn": "Your {{assetName}} will be used as collateral.",
+    "titleOff": "Disable as collateral",
+    "titleOn": "Enable as collateral"
+  },
+  "common": {
+    "apiConnecting": "API Loading",
+    "loading": "Loading ...",
+    "modal": {
+      "borrowable": "Possible borrow:",
+      "close": "Ok, close",
+      "label": {
+        "status": {
+          "failed": "failed!",
+          "pending": "Transaction in process",
+          "ready": "Amount",
+          "success": "successful!"
+        }
+      },
+      "maxButtonTitle": "max",
+      "transactionDetails": {
+        "amount": "Amount",
+        "date": "Transaction date-time",
+        "fee": "Transaction fee",
+        "id": "transaction ID"
+      },
+      "usd": "USD",
+      "withdrawable": "Withdrawable:",
+      "yourBorrow": "Your borrow:"
+    },
+    "pleaseWait": "Please wait",
+    "supplyToStart": "Supply to start",
+    "total": "Total",
+    "transaction": {
+      "sign": "Please confirm the transaction in your wallet.",
+      "success": "Transaction successful!",
+      "wait": "Please wait, transaction processing..."
+    },
+    "wait": "Please wait"
+  },
+  "connectWallet": {
+    "subtitle": "To start using Minterest",
+    "title": "Connect LBP/CAE wallet"
+  },
+  "connectWalletPopUp": {
+    "copied": "Copied",
+    "copyAddress": "Copy address",
+    "disconnectWallet": "Disconnect wallet",
+    "network": "Network"
+  },
+  "dashboard": {
+    "BDRBoost": {
+      "boostTimeRemaining": "Boost time remaining",
+      "description": "This boost increases the MINTY rewards you earn from lending and borrowing. They are included in your Minterest MINTY balance above.",
+      "subTitle": "Your special invitation boost earnings",
+      "title": "Special invitation boost",
+      "yourBoost": "Your special invitation boost"
+    },
+    "BDRCommissions": {
+      "addressTitle": "Liquidity provider",
+      "BDRTitle": "Your BDR reward",
+      "earnedRewardTitle": "Earned reward balance",
+      "header": "BDR commission",
+      "LPBoostTitle": "LP boost",
+      "timeRemainingTitle": "Agreement time remaining",
+      "totalReward": "Total reward",
+      "totalRewardTooltip": "MINTY amount earned from the BDR agreement(s), excluding MINTY staking rewards"
+    },
+    "mntRewards": {
+      "apyTitle": "Gov. rewards APY",
+      "autostakingTitle": "Governance participation (can not be disabled in Private Launch)",
+      "earned": "Total earned:",
+      "earnedCompact": "Tot. earned:",
+      "featureUnavailableTooltip": "The MINTY token is in pre-launch and not available to trade until early 2024",
+      "priceTitle": "MINTY price",
+      "title": "Your reward token Balance",
+      "placeholderText": "This section is a placeholder. The MINTY token is not yet available on TAIKO",
+      "tooltip": "MINTY buyback rewards earned for participation in protocol governance",
+      "minty": {
+        "title": "MINTY",
+        "description": "Minterest Governance Token",
+        "walletBalance": "MINTY Wallet Balance",
+        "claimable": "MINTY Claimable"
+      },
+      "stake": {
+        "buttonTitle": "Stake",
+        "title": "Wallet balance"
+      },
+      "withdraw": {
+        "buttonTitle": "Withdraw",
+        "title": "Minterest balance"
+      },
+      "price": "Price"
+    },
+    "staking": {
+      "title": "STAKING",
+      "loyaltyBoostText": "Loyalty Boost",
+      "governanceParticipation": {
+        "title": "Governance Participation",
+        "description": "Stake MINTY and turn Governance Participation” on to earn additional rewards.",
+        "button": "Stake",
+        "stakingAPY": "Staking APY",
+        "status": "Governance Participation"
+      },
+      "loyaltyBoost": {
+        "title": "Loyalty Boost",
+        "description": "The longer and more you stake MINTY, earn greater rewards.",
+        "boostLevel": "Boost Level",
+        "newBoostAvailable": "New Boost Available",
+        "upgradeToLevel": "Upgrade to Level"
+      }
+    },
+    "mntVesting": {
+      "lockedBalanceTitle": "Locked balance",
+      "title": "Minterest SUPPORTERS",
+      "unvestedBalanceTitle": "Unvested balance",
+      "vestingBalanceTitle": "Available vested balance",
+      "vestingPeriodTitle": "Est. vesting end date",
+      "description": "Stake MINTY and participate in governance to earn additional rewards."
+    },
+    "mntVestingBlock": {
+      "day": "day",
+      "days": "days",
+      "year": "year",
+      "years": "years"
+    },
+    "nftBlock": {
+      "bdrBoostNFTDisabled": "NFT disabled by the special invitation boost",
+      "notActive": "NOT ACTIVE",
+      "buyButton": "NFT Gallery",
+      "emissionBoost": {
+        "title": "Emissions reward boost"
+      },
+      "getFreeNFTButton": "Get NFT with Referrals",
+      "level": {
+        "title": "Level"
+      },
+      "nft": "Nft",
+      "nftGalleyButton": "NFT Gallery",
+      "noNft": "No NFT in your wallet",
+      "notAvailable": "N/A",
+      "marketplace": "NFTs on Mintle",
+      "title": "Minterest NFT",
+      "validity": {
+        "month": {
+          "one": "Month",
+          "other": "Months",
+          "zero": "Month"
+        },
+        "title": "Validity"
+      },
+      "validUntil": {
+        "title": "Valid until"
+      },
+      "yourNft": {
+        "noNFT": "You don’t have NFT’s",
+        "subTitle": "Minterest NFTs provide holders with substantially higher Minterest’s emissions rewards.",
+        "title": "YOUR NFT"
+      }
+    },
+    "portfolioDistribution": "Portfolio distribution",
+    "positions": {
+      "showZeroBalances": "Show zero balances",
+      "table": {
+        "asset": "Asset",
+        "borrowApr": "Borrow APR",
+        "borrowed": "Borrowed",
+        "lend": "Your supply",
+        "lendApy": "Supply APY",
+        "mntRewardsApy": "MINTY rewards APY",
+        "netAPY": "Net APY"
+      },
+      "title": "Positions"
+    },
+    "TotalNetApy": "Total Net APY",
+    "totalReturns": "Total returns",
+    "withdraw": {
+      "balance": {
+        "mnt": "Rewards Balance",
+        "staked": "Staked Balance",
+        "vested": "Available Vested Balance",
+        "vestedToday": "Vested today"
+      },
+      "footer": "After pressing withdraw please confirm the transaction in your wallet.",
+      "operationError": "An internal error JSON-RPC has occurred.",
+      "title": "Withdraw"
+    }
+  },
+  "errorPage": {
+    "buttonTitle": "Go to our website",
+    "links": {
+      "telegram": "Telegram",
+      "twitter": "Twitter"
+    },
+    "messages": {
+      "bottomMessage": "Minterest team is already working on this. Please, try again later.",
+      "topMessage": "Something went wrong"
+    },
+    "returnToAppButton": "Return to the app"
+  },
+  "errors": {
+    "inputValidation": {
+      "maxAmount": "Your input amount was matched to the max available amount.",
+      "negativeValues": "Negative values can’t be put in",
+      "notEnoughLiquidity": "Please increase your collateral ratio in order to borrow additional assets",
+      "notEnoughTokens": "Not enough tokens in your wallet"
+    },
+    "metamask": {
+      "-32000": "Not enough native tokens to execute the transaction.",
+      "-32001": "Something went wrong. Minterest team is already working on this. Please, try again later.",
+      "-32002": "Something went wrong. Minterest team is already working on this. Please, try again later.",
+      "-32003": "The transaction is rejected by chain.",
+      "-32004": "Something went wrong. Minterest team is already working on this. Please, try again later.",
+      "-32005": "Something went wrong. Minterest team is already working on this. Please, try again later.",
+      "-32006": "Something went wrong. Minterest team is already working on this. Please, try again later.",
+      "-32600": "Something went wrong. Minterest team is already working on this. Please, try again later.",
+      "-32601": "Something went wrong. Minterest team is already working on this. Please, try again later.",
+      "-32602": "Something went wrong. Minterest team is already working on this. Please, try again later.",
+      "-32603": "Approved allowance of {{available}} {{symbol}} is lower than {{input}} {{symbol}} you want to transfer. Please refresh the page and try again.",
+      "-32700": "Something went wrong. Minterest team is already working on this. Please, try again later.",
+      "4001": "The request is rejected.",
+      "4100": "Something went wrong. Minterest team is already working on this. Please, try again later.",
+      "4200": "Something went wrong. Minterest team is already working on this. Please, try again later.",
+      "4900": "Wallet connection is lost.",
+      "4901": "The chain is not available.",
+      "default": "Something went wrong. Minterest team is already working on this. Please, try again later."
+    },
+    "protocol": {
+      "default": "Something went wrong. Minterest team is already working on this. Please, try again later.",
+      "E101": "Only protocol administrator is allowed to perform this action.",
+      "E102": "You are not authorised to perform this action.",
+      "E103": "The operation is paused due to security reasons. Please, try again later.",
+      "E104": "Only whitelisted users can perform this action.",
+      "E201": "The input data is not valid. Please recheck and try again.",
+      "E202": "Withdrawals from this market is limited due to security reasons. Please try again later.",
+      "E203": "The withdrawal amount is incorrect. Please check the input and try again.",
+      "E204": "The selected asset is not supported.",
+      "E205": "The operation is declined because it makes your account position insolvent due to insufficient liquidity.",
+      "E206": "You are not authorised to perform this action.",
+      "E207": "Borrowing from this market is limited due to security reasons. Please try again later.",
+      "E208": "It is not possible to disable collateral on the market with an outstanding loan.",
+      "E209": "You are not authorised to perform this action.",
+      "E210": "Incorrect receiver address. Please check the input and try again later.",
+      "E211": "The amount of MINTY tokens entered to unstake is incorrect. Please try again. ",
+      "E212": "The input data is not valid. Please recheck and try again.",
+      "E213": "The input data is not valid. Please recheck and try again.",
+      "E214": "The input data is not valid. Please recheck and try again.",
+      "E216": "The seize distribution is invalid. Please recheck. ",
+      "E217": "The tier does not exist. Please try again. ",
+      "E218": "Invalid operation. Zero tier can’t be enabled.",
+      "E219": "The tier is already activated. ",
+      "E220": "Invalid block number. The end block number should be greater than the current block number. Please recheck. ",
+      "E221": "Invalid operation. Can’t mint tokens for activated tier. ",
+      "E222": "The input data is not valid. Please recheck and try again.",
+      "E223": "Incorrect target address. Please check the input and try again later.",
+      "E224": "Invalid operation. The tokens in the vesting contract are insufficient. ",
+      "E225": "Invalid operation. The vesting schedule already exists.",
+      "E226": "Invalid operation. The tokens are insufficient to create a schedule.",
+      "E227": "Invalid operation. The vesting schedule does not exist.",
+      "E228": "Invalid operation. The schedule cannot be revoked.",
+      "E230": "The transaction cannot be completed because there are 0 MINTY tokens on the balance of the contract. ",
+      "E231": "The input data is not valid. Please recheck and try again.",
+      "E232": "The input data is not valid. Please recheck and try again.",
+      "E233": "Incorrect member address. Please check the input and try again later.",
+      "E234": "Invalid operation. The member with the given address is already added.",
+      "E235": "Invalid operation. Max members count reached.",
+      "E236": "Invalid operation. The reported price should be greater than zero.",
+      "E237": "Incorrect address. Please check the input and try again later.",
+      "E238": "Incorrect address. Please check the input and try again later.",
+      "E239": "Invalid operation. The redeem tokens or amount should be zero.",
+      "E240": "Invalid operation. Token is not underlying.",
+      "E241": "Invalid operation. The Number of tokens passed to flash loan exceeds the allowed number of tokens in the market contract for flash loans.",
+      "E242": "Error: Callback failed. ",
+      "E243": "Error: The token is not supported.",
+      "E244": "Incorrect market address. Please check the input and try again later.",
+      "E245": "Incorrect router address. Please check the input and try again later.",
+      "E246": "Incorrect receiver address. Please check the input and try again later.",
+      "E247": "Incorrect bot address. Please check the input and try again later.",
+      "E248": "Error: Market not found.",
+      "E249": "Error: Receiver not found.",
+      "E250": "Error: Bot not found.",
+      "E251": "Router has already been set.",
+      "E252": "Receiver has already been set.",
+      "E253": "Bot has already been set.",
+      "E254": "Invalid operation. Market index is less than user index.",
+      "E255": "Error: Invalid debt rate array.",
+      "E256": "Error: Invalid seize array.",
+      "E257": "Error: Invalid debt redemption rate.",
+      "E258": "Error: Invalid seize index.",
+      "E259": "Error: Duplicate seize index.",
+      "E260": "Error: Invalid address (tokenIn).",
+      "E261": "Error: Invalid address (tokenOut)",
+      "E262": "The price of the underlying asset is not available. Please try again later.",
+      "E301": "The price of the underlying asset is not available. Please try again later.",
+      "E302": "The operation is declined due to stale market state.",
+      "E303": "Interest accrual failed because of a high borrow interest rate.",
+      "E304": "Due to security reasons, operations on this market are limited. Please try again later.",
+      "E305": "Invalid operation. MINTY balance of contract should be greater or equal to unreleased tokens. ",
+      "E306": "Invalid operation. The MINTY tokens are insufficient for the grant.",
+      "E307": "Error: Token transfer in underflow.",
+      "E308": "Error: Caller isn’t participating in the buyback.",
+      "E309": "The input data is not valid. Please recheck and try again.",
+      "E310": "The input data is not valid. Please recheck and try again.",
+      "E311": "Error: Caller is already participating in the buyback.",
+      "E312": "Error: MINTY approve has failed. ",
+      "E313": "Error: Too early to drip.",
+      "E314": "Invalid operation. Unstaking can be done after minimum one block confirmation. ",
+      "E315": "Error: insufficient shortfall.",
+      "E316": "Invalid operation. Please recheck and try again.",
+      "E317": "Invalid operation. Please recheck and try again.",
+      "E318": "Invalid operation. Please recheck and try again.",
+      "E319": "Error: No vesting schedule.",
+      "E320": "Invalid operation. More MINTY tokens than unreleased can’t be withdrawn.",
+      "E321": "Error: Oracle price is expired. ",
+      "E322": "Error: Token not found.",
+      "E323": "Error: Received price has invalid round.",
+      "E324": "Error: Pull amount is too low.",
+      "E325": "Error: Invalid total protocol interest.",
+      "E326": "Invalid operation. Account has already voted.",
+      "E327": "Invalid swap router address. Please try again.",
+      "E328": "Error: Swap call on Uniswap failed.",
+      "E329": "Invalid linkage root address. Please try again.",
+      "E401": "Exchange rate base value should be specified.",
+      "E402": "The market is already initialised.",
+      "E403": "The market is already listed.",
+      "E404": "The market is already created.",
+      "E405": "Invalid address. Please recheck and try again. ",
+      "E406": "Error: Invalid provider representative.",
+      "E407": "Error: Provider can’t be representative.",
+      "E408": "Invalid Oracle address. Please try again.",
+      "E409": "Invalid operation. The underlying token decimals should be greater than zero.",
+      "E410": "Invalid operation. Reporter multiplier should be greater than zero. ",
+      "E411": "Error: Invalid token.",
+      "E412": "Invalid operation. Protocol interest factor mantissa should be less than or equal to max protocol interest factor.",
+      "E413": "The reduce amount is greater than total protocol interest. ",
+      "E414": "Invalid operation. The liquidation fee mantissa should be greater than zero.",
+      "E415": "Invalid operation. Utilisation factor mantissa should be less than or equal to high limit. ",
+      "E416": "Invalid operation. Number of markets can’t be zero.",
+      "E417": "Error: Param is too large.",
+      "E418": "Error: Invalid non-voting period.",
+      "E419": "Error: Input array lengths are not equal.",
+      "E420": "Error: Invalid boosts.",
+      "E421": "Invalid operation. The account is already a liquidity provider.",
+      "E422": "Invalid operation. The account has no agreement.",
+      "E423": "Invalid operation. The timestamp threshold should be greater than zero.",
+      "E424": "Error: Underlying tokens decimals are too big.",
+      "E425": "Error: Reporter multiplier token decimals too big.",
+      "E426": "Invalid operation. Only the user who has a revocable schedule can be added to the delay list.",
+      "E427": "Invalid operation. The address must be on the delay list to be removed from it.",
+      "E428": "Something went wrong. Minterest team is already working on this. Please, try again later.",
+      "E501": "Something went wrong. Minterest team is already working on this. Please, try again later."
+    },
+    "transactionFailed": "Transaction Failed"
+  },
+  "governance": {
+    "button": {
+      "abstain": "Abstain",
+      "against": "Against",
+      "for": "For",
+      "votedTooltip": "You've already voted. Thank you for your choice!"
+    },
+    "details": {
+      "firstRow": "Thank you to everyone who has read our proposal to create the Uniswap Foundation thus far! Our conversations with you have energized us even more about the opportunity for the UF to positively impact the Uniswap ecosystem.",
+      "secondRow": "We have added additional information about the UGP and other topics discussed in the Temp Check forum to the addendum of the proposal. For the final governance proposal, we have also added the multisig addresses to the Addendum.",
+      "thirdRow": "Link to Temperature Check governance forum post: Temperature Check: Create the Uniswap Foundation Link to Temperature Check snapshot poll: Snapshot Link to Consensus Check governance forum post: Consensus Check: Create the Uniswap Foundation Link to Consensus Check snapshot poll: Snapshot",
+      "title": "Details"
+    },
+    "proposedBy": "Proposed by:",
+    "username": "UserName",
+    "viewOnEtherscan": "View on explorer",
+    "voteline": {
+      "title": "VOTE: Whitelist removal"
+    }
+  },
+  "header": {
+    "alert": {
+      "linkText": "here",
+      "text": "IMPORTANT INFO! Alert placeholder text. More info "
+    },
+    "button": "Connect wallet",
+    "message": {
+      "text": {
+        "firstLine": "Explore, test, and grow with us as we revolutionize decentralized finance (DeFi) together. Your feedback matters as we refine our platform to serve you better. Let's shape the future of finance, starting here!",
+        "secondLine": {
+          "dashboard": {
+            "noWhitelist": "You can view your MINTY balance and rewards on the Dashboard page. For access to supplying, ",
+            "onWhitelist": "You can view your MINTY balance and rewards on the Dashboard page. You are also whitelisted for supplying, so asset markets are enabled."
+          },
+          "markets": {
+            "hasMntNoWhitelist": " page. For access to supplying, ",
+            "hasMntOnWhitelist": " page. You are also whitelisted for supplying, so asset markets are enabled.",
+            "noMntNoWhitelist": "For access, please",
+            "notConnected": "For access, please"
+          },
+          "marketsHasMntStart": "You can view your MINTY balance and rewards on the ",
+          "signUp": "sign up"
+        }
+      },
+      "title": "Minterest launches on Taiko mainnet network!"
+    },
+    "mantleMessage": {
+      "text": {
+        "prefix": "Minterest NFT Yield Boosts are here! Increase yield emission rewards on both Supply & Borrow from 20-50% by holding a Minterest NFT. Learn more ",
+        "cta": "HERE",
+        "postfix": ".",
+        "secondLine": "Find a Minterest NFT on OpenSea (Ethereum) and Mintle (Mantle Network)."
+      },
+      "title": "Minterest on Mantle!"
+    },
+    "navbar": {
+      "on": "on",
+      "taiko": "taiko",
+      "dashboard": "Dashboard",
+      "governance": "Governance",
+      "lockAndLoad": "Lock & Load",
+      "markets": "Markets",
+      "menu": "Menu",
+      "referrals": "Referrals",
+      "website": "Website",
+      "points": "Points"
+    },
+    "nftBridge": "NFT Bridge",
+    "assetsBridge": "Assets Bridge",
+    "nftButton": "NFTs on OpenSea",
+    "swing": "Bridge Assets",
+    "mantleBridge": "Bridge to Mantle",
+    "taikoBridge": "Bridge to Taiko"
+  },
+  "infoBlock": {
+    "header": "Get the highest long term yield in DeFi",
+    "text": "The Minterest lending protocol passes on all surplus generated to its users, ensuring their best interest."
+  },
+  "ledgerModal": {
+    "connectionFailed": {
+      "title": "Ledger Connection Failed",
+      "tryAgain": "Try again",
+      "unlockYourLedger": "1. Unlock your Ledger and open the ETH application.",
+      "update": "3. If browser support is not an option in settings, update to latest firmware.",
+      "verify": "2. Verify Contract Data and Browser Support are enabled in ETH settings."
+    },
+    "loading": {
+      "instructions": "Open Ethereum application and make sure contract data and browser support are enabled.",
+      "plugIn": "Plug In Ledger & Enter Pin"
+    }
+  },
+  "nftBridge": {
+    "title": "NFT BRIDGE",
+    "description": "The NFT bridge is used to transfer Minterest NFTs between Ethereum and Mantle Network. Check the status of the bridging transaction by inserting your transaction id on LayerZero’s scanner",
+    "linkView": "here",
+    "postfix": ".",
+    "descriptionLine2": "Minterest NFT increases emission rewards for Supply and Borrow actions by 20%-50%. Learn more",
+    "descriptionLine3": "The collection of Minterest NFTs are available on OpenSea (Ethereum) and Mintle (Mantle Network).",
+    "from": "From:",
+    "to": "To:",
+    "bridgeButton": "Bridge your NFT",
+    "poweredBy": "Powered by",
+    "bridge": "bridge"
+  },
+  "assetsBridge": {
+    "title": "ASSETS BRIDGE",
+    "description": "The bridge is used to transfer Minterest MINTY tokens and NFTs between Ethereum and Mantle Network. Check the status of the bridging transaction by inserting your transaction id on LayerZero’s scanner",
+    "linkView": "here",
+    "postfix": ".",
+    "descriptionLine2": "Minterest NFT increases emission rewards for Supply and Borrow actions by 20%-50%. Learn more",
+    "descriptionLine3": "The collection of Minterest NFTs are available on OpenSea (Ethereum) and Mintle (Mantle Network).",
+    "from": "From:",
+    "to": "To:",
+    "bridgeButton": "Bridge your Asset",
+    "poweredBy": "Powered by",
+    "bridge": "bridge",
+    "tokens": "Tokens",
+    "nfts": "NFTs",
+    "tokenRequired": "Token amount is required",
+    "balance": "Balance",
+    "selectChain": "Select chain"
+  },
+  "lockAndLoad": {
+    "accept": "Accept Lock & Load",
+    "backToOffer": "Back to the offer",
+    "confirm": "Confirm",
+    "confirmationEmailDescription": "Confirmation email (optional):",
+    "currentBalance": "Your current MINTY allocation:",
+    "dashboard": {
+      "currentTokenBalance": "Current LBP/CAE allocation",
+      "estimatedReward": "Your new MINTY allocation",
+      "lockedMNT": "Previous LBP/CAE allocation",
+      "lockedPeriod": "Locked period ends in (estimated)",
+      "lockingPeriod": "Locking period",
+      "moreDetails": "More details",
+      "offerTitle": "Double your MINTY tokens!",
+      "termsAndCondition": "Terms & Conditions",
+      "title": "Lock & Load",
+      "viewOffer": "View offer",
+      "zeroBoost": {
+        "lockedMNT": "Current allocation",
+        "title": "MINTY Allocation"
+      }
+    },
+    "description": "L&L is a limited time offer available only for early adopters of the MINTY protocol. It's a rare chance to double your MINTY and access rewards only available to private investors. Act now - once the Lock & Load signup period closes, the offer ends forever.",
+    "emailError": "Email address is not correct!",
+    "error": "Technical error! Please try again.",
+    "MNT": "MINTY",
+    "moreDetails": "More details",
+    "newBalance": "Your new MINTY allocation:",
+    "newTerms": "New terms",
+    "newTermsDescription": "12 months lock-up followed by MINTY vesting block by block over 12 months.",
+    "sameAsInvestors": "(same as private investors)",
+    "success": "You successfully opted in to the Lock & Load offer!",
+    "title": "Lock & Load – Double your MINTY allocation!",
+    "viewInDashboard": "View in dashboard"
+  },
+  "points": {
+    "leaderboard": {
+      "noRows": "There are no leaderboard entries to display.",
+      "header": "HOW TO EARN",
+      "mints": "MINTS",
+      "columns": {
+        "user": "User",
+        "amount": "Total Mints",
+        "rank": "Rank"
+      }
+    },
+    "quests": {
+      "condition": " Mints/$100 every 24hrs",
+      "mints": " Mints",
+      "learnMore": "Learn more",
+      "noRows": "There are no entries to display.",
+      "names": {
+        "methLendMantle": "Supply METH",
+        "methBorrowMantle": "Borrow METH",
+        "wethLendMantle": "Supply WETH",
+        "usdtBorrowMantle": "Borrow USDT",
+        "usdcLendMantle": "Supply USDC",
+        "usdcBorrowMantle": "Borrow USDC",
+        "usdtLendMantle": "Supply USDT",
+        "usdyBorrowMantle": "Borrow USDY",
+        "wethBorrowMantle": "Borrow WETH",
+        "wmntLendMantle": "Supply WMNT",
+        "usdyLendMantle": "Supply USDY",
+        "wmntBorrowMantle": "Borrow WMNT",
+        "usdcLendTaiko": "Supply USDC"
+      }
+    },
+    "userStats": {
+      "mintsGain": "Mints Gain Within Last Day",
+      "totalMints": "Total Mints",
+      "rank": "My Rank",
+      "connectUser": "Connect wallet to see your status"
+    }
+  },
+  "marketDetail": {
+    "back": "Back",
+    "borrowed": "Borrowed",
+    "collateralFactor": "Collateral factor",
+    "historicalYieldTitle": "{{assetName}} historical yield",
+    "interestRateTitle": "Interest rate model",
+    "inYourWallet": "in your wallet",
+    "inYourWalletTooltip": "{{assetName}} In Your Wallet is {{assetName}} that is in the wallet you have connected to Minterest. This {{assetName}} is currently not locked on the Minterest protocol, and could be used for Supply or Repay activities.",
+    "lentBorrowHistoryTitle": "Market details",
+    "marketDetailBlock": "Market Details",
+    "marketDetails": "MARKET DETAILS",
+    "marketLiquidity": "Market liquidity",
+    "noOfBorrowers": "No. of borrowers",
+    "noOfSuppliers": "No. of suppliers",
+    "periods": {
+      "all": "ALL",
+      "day": "1D",
+      "month": "1M",
+      "year": "1Y"
+    },
+    "price": "Price",
+    "reserveFactor": "Reserve factor",
+    "reserves": "Reserves",
+    "supplied": "Supplied",
+    "userPositionBlock": {
+      "assetNetAPY": "net {{assetName}} apy",
+      "assetNetAPYTooltip": "Net {{assetName}} APY is the projected net Annual Percentage Yield (APY) combined:<br/>- APYs earned from all supply {{assetName}} value<br/>- Annual Percentage Rates (APRs) paid for all borrowed {{assetName}} value<br/>- MINTY rewards earned for participation in {{assetName}} supplying, borrowing, MINTY staking and governance",
+      "myAssetPossition": "Your {{assetName}} Position",
+      "totalAssetBorrowed": "Total {{assetName}} borrowed",
+      "totalAssetLent": "Total {{assetName}} Supply",
+      "transactionHistory": "TX HISTORY",
+      "yourTotalAssetBorrowed": "Your {{assetName}} borrow",
+      "yourTotalAssetBorrowedTooltip": "Your total {{assetName}} borrowed is the value of the total amount of {{assetName}} borrowed by you on the Minterest protocol.",
+      "yourTotalAssetLent": "Your {{assetName}} supply",
+      "yourTotalAssetLentTooltip": "Your Total {{assetName}} Supply is the value of the total amount of {{assetName}} supplied by you on the Minterest protocol."
+    },
+    "utilizationRatio": "Utilisation rate"
+  },
+  "markets": {
+    "mintsBase": " pts",
+    "mintsPointsPerUsd": " for $100/day",
+    "points": "Points",
+    "apr": "APR",
+    "apy": "APY",
+    "asset": "Asset",
+    "borrow": "Borrow",
+    "borrowApr": "Borrow APR",
+    "collateral": "Collateral",
+    "currentBalance": {
+      "left": "Your current",
+      "right": "balance in your wallet"
+    },
+    "lend": "Supply",
+    "nftCTA": "Get extra {{value}}",
+    "pointsCTA": "Supplying & Borrowing will earn you Mints. Larger position means higher points. NFTs can be used to boost.",
+    "linkToPoints": "Link to Mints Dashboard",
+    "mntBorrowAPY": "MINTY rewards APR is the projected Annual Percentage Rate (APR) in MINTY tokens given as a reward for borrowing this position",
+    "mntSupplyAPY": "MINTY rewards APY is the projected Annual Percentage Yield (APY) in MINTY tokens given as a reward for supplying this position",
+    "mantleBorrowAPY": "MANTLE rewards APR is the projected Annual Percentage Rate (APR) in MANTLE tokens given as a reward for borrowing this position",
+    "mantleSupplyAPY": "MANTLE rewards APY is the projected Annual Percentage Yield (APY) in MANTLE tokens given as a reward for supplying this position",
+    "taikoBorrowAPY": "MANTLE rewards APR is the projected Annual Percentage Rate (APR) in MANTLE tokens given as a reward for borrowing this position",
+    "taikoSupplyAPY": "MANTLE rewards APY is the projected Annual Percentage Yield (APY) in MANTLE tokens given as a reward for supplying this position",
+    "supply": "Supply",
+    "supplyApy": "Supply APY",
+    "totalBorrow": "Total borrow",
+    "totalBorrowed": "Total borrowed",
+    "totalBorrowMobile": "Tot. borrow",
+    "totalLent": "Total supply",
+    "totalSupply": "Total supply",
+    "totalSupplyMobile": "Tot. supply",
+    "userTotalBorrowed": "You borrowed",
+    "userTotalLent": "Your supply",
+    "yourBorrow": "Your borrow",
+    "yourSupply": "Your supply",
+    "supplyDelta": "Weekly total supply difference",
+    "borrowDelta": "Weekly total borrow difference"
+  },
+  "marketTransactionModal": {
+    "activate": "Activate",
+    "enableCollateral": "Enable as collateral",
+    "approveAmount": "Approve infinite transactions",
+    "borrow": "borrow",
+    "enableGovernance": "To maximize your yield, enable governance participation on your Dashboard.",
+    "enableSupplied": "To increase your borrow capacity, enable supplied assets as collateral here or on your Dashboard.",
+    "redeem": "withdraw",
+    "repay": "repay",
+    "status": {
+      "borrowed": "borrowed",
+      "failed": "Your {{transactionType}} transaction failed!",
+      "repayed": "repayed",
+      "succeed": "You have {{transactionType}} successfully!",
+      "supplied": "supplied",
+      "withdrawn": "withdrawn"
+    },
+    "supply": "supply",
+    "turnOnGovernance": "Turn on Governance Rewards to maximize your yield",
+    "viewOnEtherscan": "View on explorer"
+  },
+  "marketWidget": {
+    "borrowed": "Total borrowed",
+    "collateralFactor": "Max collateral ratio",
+    "marketLiquidity": "Market liquidity",
+    "price": "Price",
+    "supplied": "Total supplied",
+    "utilizationRatio": "Utilisation rate"
+  },
+  "moreMenu": {
+    "discord": "Discord",
+    "faq": "FAQ",
+    "github": "Github",
+    "more": "More",
+    "telegram": "Telegram",
+    "termsOfService": "Terms of Use",
+    "privacyPolicy": "Privacy Policy"
+  },
+  "networkWarningModal": {
+    "description": "Minterest is not supported on this network",
+    "footerDescription": "Please connect a wallet with supported network: Taiko Hekla",
+    "message": "Connection failed",
+    "title": "Network not supported"
+  },
+  "notFound": {
+    "button": "Go to the home page",
+    "description": "Sorry, the Minterest page you were looking for could not be found.",
+    "title": "That page doesn´t exist!"
+  },
+  "portfolioDistribution": {
+    "goToBorrowMarket": "Go to Markets to Borrow.",
+    "goToSupplyMarket": "Go to Markets to Supply."
+  },
+  "positionsTable": {
+    "noRows": "No rows"
+  },
+  "protocolGeneralValues": {
+    "netAPY": {
+      "title": "Net APY",
+      "tooltip": "Net APY is the projected net Annual Percentage Yield (APY) combined: \n1) APYs earned from all supplied values \n2) Annual Percentage Rates (APRs) paid for all borrowed values \n3) MINTY rewards earned for participation in supplying, borrowing, MINTY staking and governance"
+    },
+    "totalBorrowed": {
+      "title": "Total borrowed",
+      "tooltip": "Total borrowed"
+    },
+    "totalLent": {
+      "title": "Total supply",
+      "tooltip": "Total supplied"
+    },
+    "totalMarketsBorrow": {
+      "title": "Total borrow"
+    },
+    "totalMarketsSupply": {
+      "title": "Total supply"
+    },
+    "tvl": {
+      "title": "TVL"
+    },
+    "utilization": {
+      "title": "utilisation %"
+    },
+    "yourTotalBorrow": {
+      "title": "Your total borrow"
+    },
+    "yourTotalBorrowed": {
+      "title": "Your total borrow",
+      "tooltip": "Your total borrow is the value of the total amount borrowed by you on the Minterest protocol"
+    },
+    "yourTotalLent": {
+      "title": "Your total supply",
+      "tooltip": "Your total supply is the value of the total amount supplied by you on the Minterest protocol."
+    },
+    "yourTotalSupply": {
+      "title": "Your total supply"
+    }
+  },
+  "securityBlock": {
+    "compliant": "Architected for maximum security and asset safety",
+    "header": "The safest way to earn",
+    "insurance": "Built to deliver the highest safe long-term yields",
+    "militaryGradeSecurity": "Best-of-class security auditors plus in-house experts"
+  },
+  "stake": {
+    "description": "Minterest accumulates MINTY tokens through the activity of its value capture functions, and distributes the tokens as rewards to users who stake their MINTY and participate in protocol governance. Stake your MINTY to earn rewards.",
+    "title": "Stake",
+    "walletText": "in your wallet",
+    "warning": "NB! This transaction will turn on autostaking."
+  },
+  "mantleWithdraw": {
+    "title": "Withdraw",
+    "walletText": "in your wallet"
+  },
+  "taikoWithdraw": {
+    "title": "Withdraw",
+    "walletText": "in your wallet"
+  },
+  "tableAdaptive": {
+    "highestToLowest": "Highest to Lowest",
+    "sort": "Sort"
+  },
+  "terms": {
+    "date": "Date Last Revised: 27 February 2023",
+    "p1": {
+      "1": "Please review these Terms of Use of Minterest (the “Terms”) carefully, as they set forth legally binding terms and conditions between you and the Company that govern your access and/or use of (a) the website located at",
+      "2": "(the “Website”); and (b) the Minterest Smart Contracts (as defined below); including related trademarks, and other intellectual property, whether such access and/or use is via (i) the Website (“Website Access”) or (ii) command line, locally installed programs, Software Development Kits (“SDK”), software code and blockchain and smart contract explorers (collectively “Direct Access”)."
+    },
+    "p2": "For purposes of these Terms, the Website and the Minterest Smart Contracts (as defined below) shall be collectively referred to as “Minterest”.\n",
+    "p3": "By accessing and/or using Minterest, you (“you” or the “User”) agree to these Terms on behalf of yourself and any entity you represent, and you represent and warrant that you have the right and authority to do so. \n",
+    "p4": "Minterest (which includes the Website and the Minterest Smart Contracts (as defined below)) are not intended for (a) access and/or use by Excluded Persons (as defined below); or (b) access and/or use by any person or entity in, or accessing or using the Website from, an Excluded Jurisdiction.",
+    "p5": "Accordingly, Excluded Persons (as defined below) should not access and/or use Minterest (which includes the Website and the Minterest Smart Contracts (as defined below)).",
+    "p6": "The Website is owned and operated by Minterest Interface Limited (“Company”), an entity formed under the laws of the British Virgin Islands and the Minterest Smart Contracts (as defined below) are copyrighted works belonging to the Company and/or its Affiliate(s) (each of User and Company, a “Party”, and collectively, the “Parties”).",
+    "p7": "You acknowledge that you shall be deemed to have accepted these Terms by accessing and/or using Minterest – whether by Website Access or Direct Access. ",
+    "p8": "Company reserves the right to change these Terms in its sole discretion from time to time. The “Date Last Revised” specified on these Terms indicates the date on which the Terms were last changed. You will be notified of those changes and given the opportunity to review and accept the updated Terms when you next access and/or use Minterest. Your acceptance of, and/or your continued access and/or use of Minterest following notice of, the updated Terms shall indicate your acknowledgement of and agreement to be bound by such updated Terms.\n",
+    "s1": {
+      "1": {
+        "1": "Minterest has been developed by Company to enable Users to undertake any one or more of the following (“Minterest Activities”) :",
+        "1a": "Supplying to User’s desired Pool (as defined below) (“Supplying”) digital assets supported by Minterest (“Minterest Supported Tokens”) on a Minterest Supported Chain (as defined below) by :",
+        "1ai": "depositing such Minterest Supported Tokens (such Minterest Supported Tokens, “Supplied Assets”) into a smart contract address designated by Minterest to such Pool (as defined below), in accordance with the procedures for the “Supply” feature of Minterest further described at Section 2.1; and ",
+        "1aii": "in return, such User receives Receipt Tokens (as defined below) of the same amount as such Supplied Assets deposited by such User, representing the proportion of Minterest Supported Tokens contributed by such User in such Pool (as defined below), which Receipt Tokens may be redeemed for the underlying Supplied Assets and any accrued interest thereon, in accordance with the procedures for the “Withdraw” feature of Minterest further described at Section 2.1(c);",
+        "1b": "Borrowing of Minterest Supported Tokens (such Minterest Supported Tokens, “Borrow Assets”) from User’s (such User, “Borrower”) desired Pool (as defined below) (“Borrowing”), in accordance with the procedures for the “Borrow” feature of Minterest further described at Section 2.2, provided that User has deposited sufficient Collateral Assets (as defined below) in a smart contract address designated by Minterest, thereby resulting in an over-collateralised debt position for such User; and",
+        "1c": "[Staking of User’s MINTY Tokens (as defined below) in order to earn rewards in the form of additional MINTY Tokens, as further described at Section 2.4.]",
+        "2": "Minterest enables Users to undertake Minterest Activities through the use of smart contracts comprising computer code written based on various blockchain standard and programming languages (collectively, “Minterest Smart Contracts”), developed by Company or its Affiliate(s) (as defined below).",
+        "3": "For purposes of these Terms:",
+        "3a": "“Affiliates” of an entity means the owners, directors, officers, employees, advisors, agents of such entity and companies in which such entity has an interest;",
+        "3b": "“MINTY Tokens” or “MINTY” means the fungible cryptographic tokens native to Minterest;",
+        "3c": "“Collateral Assets” means sufficient approved Receipt Tokens deposited by a User in a smart contract address designated by Minterest to a Pool, resulting in an over-collateralised debt position for such User to enable such User to effect Borrowing of Minterest Supported Tokens;",
+        "3d": "“Emission Rewards” means MINTY Token emissions which may be issued to Users as rewards to incentivise participation in Minterest Transactions (as defined in Section 1.7(a) below), as further described in the Minterest Documentation;",
+        "3e": "“Liquidation Fee” means the fee payable by User arising from the liquidation of such User’s deposited Collateral Assets (pursuant to the “Auto-Liquidation” feature of Minterest as described in Section 2.3 below), which shall be denominated in the same asset-type as the Minterest Supported Tokens which had been Supplied by such User to enable such Collateral Assets to be deposited;",
+        "3f": "“Minterest Documentation” means the whitepaper on Minterest accessible at https://minterest.com/whitepaper/, the technical paper on Minterest accessible at https://minterest.com/technical-paper/ [and Frequently-Asked-Questions (“FAQs”) on Minterest accessible at [••]];",
+        "3g": "“Minterest NFTs” means the non-fungible tokens developed for and on behalf of an Affiliate of the Company, which confer on holders of such Minterest NFTs certain rights to receive boosted Emission Rewards, as described in the Minterest Documentation;\n",
+        "3h": "“Minterest Supported Chains” means, collectively, the Ethereum blockchain and such other blockchains supported by Minterest;\n",
+        "3i": "“Pool” means asset pools in which Users may deposit their Minterest Supported Tokens as Supplied Assets and/or from which Users may effect Borrowing of Minterest Supported Tokens;\n",
+        "3j": "“Receipt Tokens” means certain cryptographic tokens denoting: (i) User’s share of Supplied Assets deposited in a Pool; and (ii) such User’s entitlement to any accrued interest earned from Borrowers who have Borrowed Borrow Assets from the same Pool; and",
+        "3k": "“Stake” involves a transfer of MINTY Tokens to a Minterest Supported Chain address associated with a smart contract (which is a part of the Minterest Smart Contracts designated by Minterest), and thereafter not transferring such MINTY Tokens from such designated address for a period of time stipulated by Company and/or its Affiliate(s), and “Staked” and “Staking” shall be construed accordingly.",
+        "4": "Website Access.",
+        "4a": "The Website is a user interface designed by Company to facilitate use of the Minterest Smart Contracts by providing a user-friendly interface to access / use the Minterest Smart Contracts [although the Minterest Smart Contracts are also accessible / can be used via Direct Access]. Company may modify or discontinue support for the Website at any time, in its sole discretion. ",
+        "4b": "You are hereby granted a non-exclusive, non-transferable, revocable, limited licence to electronically access and use the Website in the manner described in these Terms. You do not have the right, and nothing in these Terms shall be construed as granting you the right, to sub-license any rights in connection with the access and/or use of the Website. Company may revoke or terminate this licence at any time if you use, or attempt to use, the Website in a manner prohibited by these Terms, or if your rights under these Terms are terminated pursuant to Section 6.",
+        "4c": "The Website allows a User to read and display data associated with any Minterest Supported Chain-compatible wallet address for which that User controls the associated private key and uses to interact with the Minterest Smart Contracts by generating standardised transaction messages in order to undertake a Minterest Activity or Minterest Transaction using Minterest – including providing a dashboard displaying a User’s Minterest Supported Tokens in such User’s Minterest Supported Chain-compatible address that is connected to the Minterest Smart Contracts as well as the Minterest Supported Tokens deposited by such User and/or other User(s) in Minterest Supported Chain-compatible addresses associated with Minterest Smart Contracts.",
+        "4d": "In order to access and/or use Minterest via the Website, a User must first connect a Minterest Supported Chain-compatible wallet to the Minterest Smart Contracts.",
+        "5": "Direct Access. With the necessary technical expertise, it is possible for a User to generate transaction messages to interact with the Minterest Smart Contracts via Direct Access directly without use of the Website. Company is not involved in and has no oversight of any Direct Access and expressly disclaims all responsibility, and User acknowledges that Company and its Affiliates shall have no responsibility for any loss occasioned to a User by or attributable to Direct Access.",
+        "6": "Minterest Smart Contracts.",
+        "6a": "Company has developed and deployed (“Deployment”) the Minterest Smart Contracts. [On Deployment, the Minterest Smart Contracts hold no digital assets.] \n",
+        "6b": "[The Minterest Smart Contracts and its source code are maintained and modifiable by the Company (and/or its Affiliates). You agree that your right to access and/or use the Minterest Smart Contracts is subject to these Terms. You further agree that you shall not acquire and/or own any legal right, title and/or interest in the Minterest Smart Contracts or any intellectual property rights associated thereto, which shall be wholly owned by the Company (and/or its Affiliates).]",
+        "7": "Transaction Fees. ",
+        "7a": "A transaction fee (“Transaction Fee”) shall be chargeable to a User for each Minterest-related transaction (“Minterest Transaction”) – whether Supplying or Borrowing – executed through the Minterest Smart Contracts. Such Transaction Fees are separate and distinct from any other amount(s) payable in the execution of specific transactions via the Minterest Smart Contracts, if any (including Liquidation Fees). ",
+        "7b": "The Transaction Fee for a specific Minterest Transaction will be displayed to Users of the Website during the initiation of such Minterest Transaction and must be accepted by a User before executing such Minterest Transaction. ",
+        "7c": "A User hereby consents to such fees being debited from such User’s Minterest Supported Chain-compatible wallet that such User connects to the Minterest Smart Contracts for purposes of effecting a Minterest Transaction, at the time such Minterest Transaction is processed. [Similar transaction fees may also be levied on Users accessing and using the Minterest Smart Contracts via Direct Access.] ",
+        "7d": "Such Transaction Fees may be subject of variation through on-chain governance with such variation implemented by Company via variations to the Minterest Smart Contracts."
+      },
+      "title": "Overview of Minterest"
+    },
+    "s10": {
+      "1": {
+        "1": "These Terms and any dispute or claim arising out of or in connection with their subject matter or formation (including non-contractual disputes or claims) shall be governed by and construed in accordance with the law of the British Virgin Islands.], without giving effect to its principles or rules of conflict of laws, to the extent such principles or rules are not mandatorily applicable by statute and would permit or require the application of the laws of another jurisdiction. ",
+        "2": "Minterest may not be available or permitted by laws for use in some jurisdictions (including the Excluded Jurisdictions). Company and its Affiliates do not represent or warrant that Minterest or any part thereof is available or permitted by laws for use in any particular jurisdiction. In choosing to access and/or use Minterest, you do so on your own initiative and at your own risk, and you are responsible for complying with all applicable local laws, rules and regulations.\n"
+      },
+      "title": "Governing Law and Jurisdiction"
+    },
+    "s11": {
+      "1": {
+        "1": "Entire Terms. These Terms constitute the entire agreement between you and Company regarding your access and/or use of Minterest. The section titles in these Terms are for convenience only and have no legal or contractual effect. The word “including” means “including without limitation”.",
+        "2": "Severability. If any provision of these Terms is, for any reason, held to be invalid or unenforceable, the other provisions of these Terms will be unimpaired and the invalid or unenforceable provision will be deemed modified so that it is valid and enforceable to the maximum extent permitted by law.",
+        "3": "Relationship of the Parties. Nothing contained in this Agreement will be deemed to be construed by the Parties or any third party as creating a partnership, an agency relationship or joint venture between the Parties or any of their respective employees, representatives, or agents.\n",
+        "4": "Third party rights. Save for the Indemnified Parties who shall have rights and benefits to the extent accorded thereto under these Terms, any person who is not a Party to these Terms shall have no right to enforce any provisions of this Agreement.\n",
+        "5": "Assignment. These Terms, and your rights and obligations herein, may not be assigned, subcontracted, delegated, or otherwise transferred by you without Company’s prior written consent, and any attempted assignment, subcontract, delegation, or transfer in violation of the foregoing will be null and void. Company may freely assign these Terms. The terms and conditions set forth in these Terms shall be binding upon assignees.",
+        "6": "Changes. Company reserves the right to change these Terms in its sole discretion from time to time. The “Date Last Revised” specified on these Terms indicates the date on which the Terms were last changed. You will be given the opportunity to review and accept the updated Terms when you next access and/or use Minterest. These changes will be effective upon your acceptance of the updated Terms. In addition, continued access and/or use of Minterest following notice of such changes shall indicate your acknowledgement of such changes and agreement to be bound by the terms and conditions of such changes.\n",
+        "7": "Waiver. A waiver by Company of any right or remedy under these Terms shall only be effective if it is in writing, executed by a duly authorised representative of Company and shall apply only to the circumstances for which it is given. The failure of Company to exercise or enforce any right or remedy under these Terms shall not operate as a waiver of such right or remedy, nor shall it prevent any future exercise or enforcement of such right or remedy. No single or partial exercise of any right or remedy shall preclude or restrict the further exercise of any such right or remedy or other rights or remedies."
+      },
+      "title": "General"
+    },
+    "s2": {
+      "2": {
+        "1": "Supplying:\n",
+        "1a": "User may Supply Minterest Supported Tokens by depositing such Minterest Supported Tokens to such User’s desired Pool and receive Receipt Tokens of the same amount via the “Supply” feature accessible through the Website or Direct Access. [The process for Supplying Minterest Supported Tokens is illustrated in a tutorial under the tab entitled “[••]” at [•URL].]",
+        "1b": "A User who has Supplied Minterest Supported Tokens may earn rewards in the form of interest accruing on such Supplied Assets, at interest rates described under the “Supply” feature accessible through the Website or Direct Access, as supplemented by the Minterest Documentation. A User who has Supplied Minterest Supported Tokens may also earn Emission Rewards in the form of MINTY Tokens, in proportion to the User’s share of Supplied Assets deposited in the relevant Pool containing Minterest Supported Tokens of the same asset type as such User’s Supplied Assets.",
+        "1c": "A User who has Supplied Minterest Supported Tokens may initiate a withdrawal (“Withdrawal”) of such Supplied Assets and any accrued interest thereon, and/or Emission Rewards (insofar as such Emission Rewards have vested with User in accordance with the applicable vesting schedule, as described in the Minterest Documentation) via the “Withdraw” feature accessible through the Website or Direct Access. When initiating a Withdrawal of Supplied Assets, the User deposits the Receipt Tokens (which such User had received in connection with Supplying such Supplied Assets) in a smart contract address designated by Minterest. Such Receipt Tokens deposited by the User in such smart contract address designated by Minterest are burned, and the Supplied Assets represented by such Receipt Tokens are transferred to such User’s Minterest Supported Chain-compatible wallet address to effect the Withdrawal. [The process for effecting Withdrawal is illustrated in a tutorial under the tab entitled “[••]” at [•URL].]",
+        "1d": "A User accessing and/or using Minterest to Supply Minterest Supported Tokens, to earn rewards in the form of interest accruing on such Supplied Assets and/or Emission Rewards, and/or to effect Withdrawals, is deemed to have read and understood the Minterest Documentation, and acknowledges and accepts all risks and fees relating to Supplying, the earning of interest and Emission Rewards in connection with such Supplying and effecting Withdrawals as set out in the Minterest Documentation, [including but not limited to such risks as set out under the tab entitled “[••]” at [•URL].]",
+        "2": "Borrowing:",
+        "2a": "Provided that a User has deposited sufficient approved Collateral Assets in a smart contract address designated by Minterest to such User’s desired Pool in accordance with sub-paragraph (b) below, such User may effect Borrowing of Minterest Supported Tokens from the same or another Pool, via the “Borrow” feature accessible through the Website or Direct Access. [The process for effecting Borrowing is illustrated in a tutorial under the tab entitled “[••]” at [•URL].]",
+        "2b": "A User who wishes to effect Borrowing on Minterest, but who does not at such time have an open Supply position under which such User has deposited sufficient Required Collateral Assets (as defined below), must first Supply Minterest Supported Tokens via the “Supply” feature as described at Section 2.1, in order to receive sufficient Receipt Tokens of the type required to be deposited as Collateral Assets (such Receipt Tokens referred to in this Section 2.2 as the “Required Collateral Assets”). User may then deposit the Required Collateral Assets in a smart contract address designated by Minterest via the “Enable as Collateral” feature accessible through the Website or Direct Access, thereby resulting in an over-collateralised debt position for such User.",
+        "2c": "A User who has effected Borrowing of Borrow Assets may initiate a repayment of Minterest Supported Tokens of the same type as such Borrow Assets and any interest payable thereon (“Repayment”), via the “Repay” feature accessible through the Website or Direct Access. [The process for effecting Repayment is illustrated in a tutorial under the tab entitled “[••]” at [•URL].]",
+        "2d": "A User who has effected a Minterest Transaction by Borrowing Minterest Supported Tokens may earn Emission Rewards for such ecosystem participation, and may initiate a Withdrawal of such Emission Rewards (insofar as such Emission Rewards have vested with User in accordance with the applicable vesting schedule, as described in the Minterest Documentation), via the “Withdraw” feature accessible through the Website or Direct Access (as described in Section 2.1(c) above).\n",
+        "2e": "A User accessing and/or using Minterest to effect Borrowing and/or Repayment:",
+        "2ei": "is deemed to have read and understood the Minterest Documentation; and ",
+        "2eia": "the risk of User’s deposited Collateral Assets (including all Supplied Assets by such User underlying such deposited Collateral Assets) being subject of and liquidated in an Auto-Liquidation (as defined below) and the Liquidation Fee imposed on such User in such Auto-Liquidation, in the event such User’s Utilisation Ratio (as defined in the Minterest Documentation) amounts to less than 1; and",
+        "2eib": "such other risks as set out in the Minterest Documentation.",
+        "2eii": "acknowledges and accepts all risks, fees and applicable interest payable by such User in connection with Borrowing and/or all risks and fees in effecting Repayment as set out in the Minterest Documentation and supplemented by the FAQs, including but not limited to:",
+        "2eiia": "the risk of User’s deposited Collateral Assets (including all Supplied Assets by such User underlying such deposited Collateral Assets) being subject of and liquidated in an Auto-Liquidation (as defined below) and the Liquidation Fee imposed on such User in such Auto-Liquidation, in the event such User’s Utilisation Ratio (as defined in the Minterest Documentation) amounts to less than 1; and",
+        "3": "Auto-Liquidation:",
+        "3a": "In accessing and/or using Minterest to effect Supplying and Borrowing, User acknowledges and accepts that, in the event that such User’s debt position is under-collateralised (measured by all Borrowings by such User taken as a whole, against all Collateral Assets deposited by such User in all Pools in accordance with the processes described at Section 2.2(b) above), resulting in such User’s Utilisation Ratio (as defined in the Minterest Documentation) amounting to less than 1, all of User’s deposited Collateral Assets (including all Supplied Assets by such User underlying such deposited Collateral Assets), or any part thereof, may be subject of an automated liquidation (“Auto-Liquidation”) executed by a designated Minterest Smart Contract. The process for Auto-Liquidation is as described in further detail in the Minterest Documentation.",
+        "3b": "Company does not control, validate or execute any Auto-Liquidations, which are executed solely via the pre-configured Minterest Smart Contract(s) designated to identify and validate the under-collateralised debt positions of Users and to execute Auto-Liquidations.",
+        "3c": "In the event of an Auto-Liquidation of a User’s deposited Collateral Assets (such Collateral Assets subject of Auto-Liquidation, referred to in this Section 2.3 as “Relevant Collateral Assets”):\n",
+        "3ci": "the Supplied Assets of User underlying the Relevant Collateral Assets (less the Liquidation Fee) will be exchanged on-market for such Minterest Supported Tokens (“Auto-Liquidation Proceeds”) of the asset-type(s) required to be deposited into the relevant Pool(s) from which such User had Borrowed Borrow Assets (the relevant Supplied Assets of User subject of Auto-Liquidation, the asset-type(s) of Minterest Supported Tokens constituting Auto-Liquidation Proceeds, and Pool(s) into which the Auto-Liquidation Proceeds are deposited being determined solely by operation of the designated Minterest Smart Contract(s)), and the Auto-Liquidation Proceeds will be deposited in the relevant Pool(s) as Repayment (which may be partial or in full) of such Borrow Assets Borrowed by such User from such Pool(s), thereby increasing such User’s Utilisation Ratio (as defined in the Minterest Documentation); and ",
+        "3cii": "the Liquidation Fee which is payable by such User will be deducted prior to the Auto-Liquidation process described at Section 2.3(c)(i) above.",
+        "4": "Staking: ",
+        "4a": "[Users who choose to Stake their MINTY Tokens with Minterest may be entitled to earn rewards in the form of additional MINTY Tokens, which may include Loyalty Rewards (as defined in the Minterest Documentation).] [The process for Staking MINTY Tokens is illustrated in a tutorial under the tab entitled “[••]” at [•URL].]\n",
+        "4b": "A User accessing and/or using Minterest for Staking is deemed to have read and understood the Minterest Documentation, and acknowledges and accepts all risks and fees relating to Staking as set out in the Minterest Documentation. ",
+        "5": "Rewards:",
+        "5a1": "A User who participates in Minterest Transactions may be entitled to receive further incentives and/or participate in rewards programme(s), including Standard Rewards, Buyback Rewards and Loyalty Rewards (each as defined in the Minterest Documentation). Details of ongoing rewards programme(s) are found under [the tab entitled “Minterest Emission Rewards” at ",
+        "5a2": ",] as supplemented by the Minterest Documentation. ",
+        "5b": "[The process for receiving such incentives and rewards is illustrated in a tutorial under the tab entitled at "
+      },
+      "title": "Using Minterest"
+    },
+    "s3": {
+      "1": {
+        "1": "You make the following representations and warranties regarding your access and/or use of Minterest:",
+        "1a": "THAT you are legally permitted to access and/or use Minterest in your jurisdiction and your access and/or use of Minterest is in compliance with the laws of your jurisdiction, and you acknowledge that Company is not liable for your compliance or non-compliance with any such laws;",
+        "1b": "THAT your agreement to these Terms and your access and/or use of Minterest does not constitute, and that you do not expect it to result in, a breach, default, or violation of any applicable law or any contract or agreement to which you are a party or are otherwise bound;",
+        "1c": "THAT you are not an Excluded Person and are not in an Excluded Jurisdiction, and are not accessing or using Minterest from an Excluded Jurisdiction and for purposes hereof : ",
+        "1ci1": "“Excluded Jurisdiction” means any of the following jurisdictions : (1) [the United States of America and its territories and possessions (collectively, the “United States”);] (2) [the Republic of Estonia]; (3) [the British Virgin Islands]; (4) a jurisdiction identified by the Financial Action Task Force (FATF) for strategic AML/CFT deficiencies and included in FATF’s listing of “High-risk and Other Monitored Jurisdictions” accessible at ",
+        "1ci2": "Call for Action” accessible at",
+        "1ci3": "and/or (5) a jurisdiction in which Minterest would be subject of licensing; and",
+        "1cii1": "“Excluded Persons” refers to the following person(s) : (1) a person who is a citizen, domiciled in, resident of, or physically present / located in an Excluded Jurisdiction; (2) a body corporate: (a) which is incorporated in, or operates out of, an Excluded Jurisdiction, or (b) which is under the control of one or more individuals who is/are citizen(s) of, domiciled in, residents of, or physically present / located in, an Excluded Jurisdiction; (3) an individual or body corporate included in United Nations Consolidated List (accessible at ",
+        "1cii2": "; (4) an individual or body corporate which is otherwise prohibited or ineligible in any way, whether in full or in part, under any laws applicable to such individual or body corporate from accessing and/or using Minterest; and/or (5) [a U.S. person.]\n\n[For purposes of these Terms, a “U.S. person” means:\n",
+        "1ciiA": "any natural person resident in the United States;\n",
+        "1ciiB": "any partnership or corporation organised or incorporated under the laws of the United States;\n",
+        "1ciiC": "any estate of which any executor or administrator is a U.S. person;",
+        "1ciiD": "any trust of which any trustee is a U.S. person;",
+        "1ciiE": "any agency or branch of a foreign entity located in the United States;",
+        "1ciiF": "any non-discretionary account or similar account (other than an estate or trust) held by a dealer or other fiduciary for the benefit or account of a U.S. person;\n",
+        "1ciiG": "any discretionary account or similar account (other than an estate or trust) held by a dealer or other fiduciary organised, incorporated, or (if an individual) resident in the United States; \n",
+        "1ciiH": "any partnership or corporation if:",
+        "1ciiHi": "organised or incorporated under the laws of any foreign jurisdiction; and",
+        "1ciiHii": "formed by a U.S. person principally for the purpose of investing in securities not registered under the Securities Act of 1933 of the United States of America, unless it is organised or incorporated, and owned, by accredited investors (as defined in Regulation D of that Act) who are not natural persons, estates or trusts; and",
+        "1ciiI": "any citizen of United States who is a military personnel of United States who is not resident in or outside of the United States,\n\nbut does not include :",
+        "1ciiJ": "any discretionary account or similar account (other than an estate or trust) held for the benefit or account of a non-U.S. person by a dealer or other professional fiduciary organized, incorporated, or (if an individual) resident in the United States;",
+        "1ciiK": "any estate of which any professional fiduciary acting as executor or administrator is a U.S. person if:",
+        "1ciiKi": "an executor or administrator of the estate who is not a U.S. person has sole or shared investment discretion with respect to the assets of the estate; and",
+        "1ciiKii": "the estate is governed by foreign law;",
+        "1ciiL": "any trust of which any professional fiduciary acting as trustee is a U.S. person, if a trustee who is not a U.S. person has sole or shared investment discretion with respect to the trust assets, and no beneficiary of the trust (and no settlor if the trust is revocable) is a U.S. person;\n",
+        "1ciiM": "an employee benefit plan established and administered in accordance with the law of a country other than the United States and customary practices and documentation of such country;",
+        "1ciiN": "any agency or branch of a U.S. person located outside the United States if:\n",
+        "1ciiNi": "agency or branch operates for valid business reasons; and",
+        "1ciiNii": "the agency or branch is engaged in the business of insurance or banking and is subject to substantive insurance or banking regulation, respectively, in the jurisdiction where located; and",
+        "1ciiO": "The International Monetary Fund, the International Bank for Reconstruction and Development, the Inter-American Development Bank, the Asian Development Bank, the African Development Bank, the United Nations, and their agencies, affiliates and pension plans, and any other similar international organizations, their agencies, affiliates and pension plans;] ",
+        "1d": "THAT you will not, and will not attempt to, authorise anyone other than you to access and/or use Minterest using a Minterest Supported Chain-compatible wallet owned by you or for which you control the private keys, or otherwise engage in Prohibited Use (as defined below) using such Minterest Supported Chain-compatible wallet;",
+        "1e": "THAT you will not disrupt, interfere with, or otherwise adversely affect the normal flow of Minterest or otherwise act in a manner that may negatively affect other Users’ experience when accessing and/or using Minterest including taking advantage of software vulnerabilities and any other act that intentionally abuses or exploits the design of Minterest;",
+        "1f": "THAT: ",
+        "1fi": "you have read and understood the Minterest Documentation and accept all risks [set out therein or] associated with the use of Minterest, including market volatility risks and risks associated with hacks, exploits, malfunctions or misuse of smart contracts and oracles which may result in a loss of digital assets; ",
+        "1fii": "you are sophisticated in using and evaluating blockchain technologies and related blockchain-based digital assets, including the Minterest Supported Chains and Minterest Supported Tokens, as well as smart contract systems; and",
+        "1fiii": "you have evaluated and understand all functions of and all risks associated with your access and/or use of Minterest and your undertaking of any Minterest Activity or Minterest Transaction using Minterest and have not relied on any information, statement, representation, or warranty, express or implied, made by or on behalf of Company with respect to the access and/or use of Minterest and your undertaking of any Minterest Activity or Minterest Transaction using Minterest."
+      },
+      "2": {
+        "1": "All of the above representations and warranties are true, complete, accurate and not misleading from the time of your acceptance of these Terms and are deemed repeated each time you access and/or use Minterest."
+      },
+      "title": "Representations & Warranties"
+    },
+    "s4": {
+      "1": {
+        "1": "You may not, directly or indirectly, engage in any of the following activities in connection with your access and/or use of Minterest (“Prohibited Uses”):\n",
+        "1a": "A violation of any law, rule, or regulation of any jurisdiction that is applicable to you;",
+        "1b": "Violations or breaches of these Terms or any other document from time to time governing the access and/or use of Minterest;\n",
+        "1c": "Permit others to access and/or use Minterest or otherwise undertake any Minterest Activity or Minterest Transaction using a Minterest Supported Chain-compatible wallet address that you control;",
+        "1d": "Perform, or attempt to perform, any actions that would interfere with the normal operation of Minterest or affect the access and/or use of Minterest by other Users;\n",
+        "1e": "Engage in, or knowingly facilitate, any fraudulent, deceptive, or manipulative transaction activity in any digital asset using Minterest, including by engaging or participating in “front-running”, “wash trading”, “pump and dump schemes”, or similar activities;\n",
+        "1f": "Engage in, or knowingly facilitate, any money laundering, terrorist financing, or other illegal activities;",
+        "1g": "Access or attempt to access non-public systems, programs, data, or services;",
+        "1h": "Copy, reproduce, republish, upload, post, transmit, resell, or distribute in any way, any data, content or any part of Minterest, except as expressly permitted by applicable laws; and\n",
+        "1i": "Reverse engineer or attempt to reverse engineer Minterest except as expressly permitted by applicable law."
+      },
+      "title": "Prohibited Use"
+    },
+    "s5": {
+      "1": {
+        "1": "You agree and acknowledge that Company and its Affiliates shall not be liable for any direct, indirect, special, incidental, consequential or other losses of any kind, in tort, contract or otherwise (including but not limited to loss of fund, asset, revenue, income or profits, and loss of use or data), arising out of or in connection with your access and/or use of Minterest or your undertaking of any Minterest Activity or Minterest Transaction.\n",
+        "2": "You undertake not to initiate or participate, and waive the right to participate in, any class action lawsuit or a class-wide arbitration against Company and/or its Affiliates in respect of your access and/or use of Minterest or your undertaking of any Minterest Activity or Minterest Transaction.",
+        "3": "By accepting these Terms, you waive all rights, claims and/or causes of action (present or future) under law (including any tortious claims) or contract against Company and its Affiliates in connection with your access and/or use of Minterest or your undertaking of any Minterest Activity or Minterest Transaction."
+      },
+      "title": "Waivers"
+    },
+    "s6": {
+      "1": {
+        "1": "These Terms will remain in full force and effect for so long as you access and/or use Minterest or undertake any Minterest Activity or Minterest Transaction. Company may suspend or terminate your rights to access and/or use Minterest at any time for any reason at Company’s sole discretion, including for any access and/or use of Minterest in violation of these Terms.",
+        "2": "Upon termination of your rights under these Terms, your right to access and/or use Minterest will terminate immediately. ",
+        "3": "Company will not have any liability whatsoever to you for any termination of your rights under these Terms, including blacklisting any blockchain address you may have used to access Minterest. Even after your rights under these Terms are terminated, Sections 5, 6.3, 7 and 8 of these Terms will remain in effect. "
+      },
+      "title": "Termination"
+    },
+    "s7": {
+      "1": {
+        "1": "Disclaimer. ",
+        "1a": "MINTEREST (WHICH INCLUDES THE WEBSITE AND THE MINTEREST SMART CONTRACTS) ARE PROVIDED ON AN “AS-IS'' AND “AS AVAILABLE” BASIS, AND COMPANY EXPRESSLY DISCLAIMS ANY AND ALL WARRANTIES AND CONDITIONS OF ANY KIND, WHETHER EXPRESS, IMPLIED, OR STATUTORY, INCLUDING ALL WARRANTIES OR CONDITIONS OF MERCHANTABILITY, MERCHANTABLE QUALITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, QUIET ENJOYMENT, ACCURACY, OR NON-INFRINGEMENT. COMPANY DOES NOT MAKE ANY WARRANTY THAT MINTEREST WILL MEET YOUR REQUIREMENTS, WILL BE AVAILABLE ON AN UNINTERRUPTED, TIMELY, SECURE, OR ERROR-FREE BASIS, OR WILL BE ACCURATE, RELIABLE, FREE OF VIRUSES OR OTHER HARMFUL CODE, COMPLETE, LEGAL, OR SAFE. IF APPLICABLE LAW REQUIRES ANY WARRANTIES WITH RESPECT TO MINTEREST, ALL SUCH WARRANTIES ARE LIMITED IN DURATION TO [SIXTY (60) DAYS] FROM THE DATE OF FIRST USE.",
+        "1b": "COMPANY DOES NOT ENDORSE ANY THIRD PARTY AND SHALL NOT BE RESPONSIBLE IN ANY WAY FOR ANY TRANSACTIONS YOU ENTER INTO WITH ANY OTHER THIRD PARTY, OR FOR ANY LOSS ARISING FROM YOUR RELIANCE ON ANY REPRESENTATION MADE BY OR ANY INFORMATION PROVIDED BY ANY OTHER THIRD PARTY (INCLUDING ANY ORACLE PROVIDERS). YOU AGREE THAT COMPANY AND ITS AFFILIATES WILL NOT BE LIABLE FOR ANY LOSS OR DAMAGES OF ANY SORT INCURRED AS A RESULT OF ANY INTERACTIONS BETWEEN YOU AND ANY THIRD PARTY.",
+        "2": "Limitation of Liability. ",
+        "2a": "SOME JURISDICTIONS DO NOT ALLOW THE EXCLUSION OR LIMITATION OF LIABILITY, INCLUDING LIMITATION OF LIABILITY FOR CONSEQUENTIAL OR INCIDENTAL DAMAGES, SO THE FOLLOWING LIMITATIONS MAY NOT APPLY TO YOU AND YOU MAY HAVE ADDITIONAL RIGHTS. \n",
+        "2b": "TO THE MAXIMUM EXTENT PERMITTED BY LAW, IN NO EVENT SHALL COMPANY AND/OR ITS AFFILIATES BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY LOST PROFITS, LOST DATA, OR ANY INDIRECT, CONSEQUENTIAL, EXEMPLARY, INCIDENTAL, SPECIAL OR PUNITIVE DAMAGES ARISING OUT OF YOUR USE OF MINTEREST, EVEN IF COMPANY HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. ACCESS TO, AND USE OF, MINTEREST IS AT YOUR OWN DISCRETION AND RISK, AND YOU WILL BE SOLELY RESPONSIBLE FOR ANY DAMAGE TO YOUR DEVICE OR COMPUTER SYSTEM, OR LOSS OF DATA, OR LOSS OF FUND RESULTING THEREFROM.",
+        "2c": "COMPANY AND ITS AFFILIATES SHALL NOT BE LIABLE FOR ANY LOSS OR DAMAGE ARISING OUT OF YOUR FAILURE TO KEEP YOUR PRIVATE KEYS OR LOGIN CREDENTIALS TO YOUR WALLET SECURE OR ANY OTHER UNAUTHORISED ACCESS TO OR TRANSACTIONS INVOLVING YOUR WALLET.",
+        "2d": "TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, NOTWITHSTANDING ANYTHING TO THE CONTRARY CONTAINED HEREIN, THE LIABILITY OF COMPANY TO YOU FOR ANY DAMAGES ARISING FROM OR RELATED TO THIS AGREEMENT (FOR ANY CAUSE WHATSOEVER AND REGARDLESS OF THE FORM OF THE ACTION), WILL AT ALL TIMES BE LIMITED TO A MAXIMUM OF THE AMOUNT OF TRANSACTION FEES PAID BY YOU IN CONNECTION WITH YOUR ACCESS AND/OR USE OF MINTEREST DURING THE PRECEDING TWELVE (12) MONTHS. THE EXISTENCE OF MORE THAN ONE CLAIM WILL NOT ENLARGE THIS LIMIT.",
+        "3": "Indemnification. You agree to indemnify and hold Company and its Affiliates (each an “Indemnified Party”, and collectively “Indemnified Parties”) harmless from any loss, claim or demand made, including costs and attorneys’ fees, due to or arising out of: ",
+        "32": "The relevant Indemnified Party reserves the right, at your expense, to assume the exclusive defense and control of any matter for which you are required to provide indemnification, and you agree to cooperate in the defense of these claims. You agree not to settle any matter without the prior written consent of the relevant Indemnified Party or Indemnified Parties. The relevant Indemnified Party will use reasonable efforts to notify you of any such claim, action or proceeding upon becoming aware of it.",
+        "3i": "your access and/or use of Minterest (which includes the Website and the Minterest Smart Contracts) or your undertaking of any Minterest Activity or Minterest Transaction (including Supplying, Borrowing and Staking); ",
+        "3ii": "your non-observance of these Terms; and/or ",
+        "3iii": "your violation of applicable laws or regulations.",
+        "4": "Taxes. You are solely responsible for determining the tax implications and tax reporting requirements associated with your access and/or use of Minterest and/or associated with any Minterest Activities or Minterest Transactions you undertake, and for paying any applicable taxes in each applicable jurisdiction in relation thereto. Company is not responsible for determining whether there are tax implications or tax reporting in connection with your access and/or use of Minterest and/or associated with any Minterest Activities or Minterest Transactions you undertake, or for paying any applicable taxes in relation thereto.\n",
+        "5": "Potential Risks Associated with Access and/or Use of Minterest (which includes the Website and the Minterest Smart Contracts).",
+        "5a": "Like all software, Minterest (which includes the Website and the Minterest Smart Contracts) may be subject to exploits. Company is not responsible for exploits of any kind. While Company has taken a number of precautions to ensure the security of Minterest (which includes the Website and the Minterest Smart Contracts), the technology is relatively new and it is not possible to guarantee that the code is completely free from bugs or errors. Users accept all risks that arise from access and/or use of Minterest (which includes the Website and the Minterest Smart Contracts), including, and not limited to, the risk of any digital assets being lost due to a failure, malfunction or exploit of Minterest (whether in relation to the Website, the Minterest Smart Contracts and/or the Minterest Supported Chains).",
+        "5b": "You are solely responsible for securing the private keys associated with any Minterest Supported Chain-compatible wallet you may use when accessing and/or using Minterest. You understand that anyone who obtains your private keys and access to your device may access such Minterest Supported Chain-compatible wallet controlled with those private keys with or without your authorisation and may transfer out any digital assets from the blockchain address associated with such Minterest Supported Chain-compatible wallet.",
+        "5c": "The value of any digital asset, where value is attached to such an asset, may fluctuate. Company makes no guarantees as to the price or value of any digital asset on any secondary market, including the yield attributable to any Minterest Activity or Minterest Transaction that you undertake.",
+        "5d": "The following risks are associated with blockchain-based digital assets involved in connection with your access and/or use of Minterest and your undertaking of Minterest Activities and/or Minterest Transactions : the risk of losing private keys, theft resulting from third parties discovering your private key, value fluctuation of digital assets on the secondary market, disruptions to the Minterest Supported Chains connected to Minterest caused by network congestion, lack of usability of, or loss of value with respect to, digital assets due to a hard fork or other disruption to the Minterest Supported Chains connected to Minterest, or errors or vulnerabilities in the smart contract code associated with a given digital asset or transactions involving digital assets. Transfers on the Minterest Supported Chains are irreversible. Once an instruction, signed by the required private key(s), to transfer a digital asset from one blockchain address to another has been executed, it cannot be undone.",
+        "5e": "Support for your access and/or use of Minterest (which includes the Website and the Minterest Smart Contracts) whether via the Website and/or Direct Access or for your undertaking of any Minterest Activity or Minterest Transaction (including Supplying, Borrowing and Staking) may be modified or discontinued at any time, and Company reserves the right, at any time, in its sole discretion, to modify the Website and/or the Minterest Smart Contracts.\n",
+        "5f": "In the event of a change or other network disruption to a Minterest Supported Chain connected to Minterest, whether resulting in a fork of a Minterest Supported Chain connected to Minterest, Minterest may halt and stop functioning and you may not be able to undertake or complete any Minterest Activity or Minterest Transaction. In addition, in the event of a fork, Minterest Activity or Minterest Transaction on that Minterest Supported Chain may be disrupted.\n",
+        "5g": "The Minterest Supported Chains connected to Minterest charge a fee for engaging in a transaction on the applicable network. Those network transaction fees fluctuate over time depending on a variety of factors. You are solely responsible for paying network transaction fees associated with any Minterest Activity or Minterest Transaction you undertake using Minterest on the applicable Minterest Supported Chain connected to Minterest. You are also solely responsible for any other third-party fees that may be incurred in connection with your access and/or use of Minterest."
+      },
+      "title": "Disclaimers and Limitation of Liability"
+    },
+    "s8": {
+      "title": "Dispute Resolution.Subject always to Sections 5 and 7 of these Terms, any claim, suit, or dispute arising out of or in connection with these Terms, including any question regarding its existence, validity or termination, shall be referred to and finally be resolved by arbitration in accordance with the arbitration rules of the British Virgin Islands, before a panel of three (3) arbitrators. Each of the Parties hereby has the right to appoint an arbitrator, and the two (2) appointed arbitrators shall select the third arbitrator. The panel shall reach its decisions by a vote of a majority. Any claim shall be brought individually on behalf of the person or entity seeking relief, not on behalf of a class or other persons or entities not participating in the arbitration and shall not be consolidated with the claim of any person who is not asserting a claim arising under or relating to this contract. The seat of arbitration shall be the British Virgin Islands and the language of any arbitration shall be English. Judgment on any award rendered by the arbitrators may be entered by any court of competent jurisdiction.]\n"
+    },
+    "s9": {
+      "title": "Electronic Communications with Company. The communications between you and Company use electronic means, either through the Website or electronic mail, whether Company communicates by posting notices on the Website, or communicates with you via email. For contractual purposes, you: (i) hereby consent to receive communications from Company in any electronic form; and (ii) hereby agree that all terms and conditions, agreements, notices, disclosures, and other communications that Company provides to you electronically satisfy any legal requirement that would also be satisfied if such communications were to be in a hardcopy writing. The foregoing does not affect your non-waivable rights under any applicable law.\n"
+    },
+    "title": "Minterest Terms of Use"
+  },
+  "termsOfService": {
+    "sections": {
+      "assumption": {
+        "text": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n\nLorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "title": "4. Assumption of Risk"
+      },
+      "comingSoon": "Coming soon",
+      "privacy": {
+        "text": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "title": "3. Privacy"
+      },
+      "services": {
+        "text": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "title": "2. Services"
+      },
+      "useOfServices": {
+        "text": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised",
+        "title": "Use of the services"
+      },
+      "welcome": {
+        "text": "Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.\n\nLorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
+        "title": "1. Welcome to Minterest.com"
+      }
+    },
+    "title": "Terms of Use"
+  },
+  "termsOfServices": {
+    "byConnecting": "By proceeding, you understand & agree to the",
+    "terms": "Terms of Use"
+  },
+  "tooltips": {
+    "healtFactor": "Shows collateral to borrow ratio.",
+    "autostaking": "Autostaking switch is disabled",
+    "borrow": "market is not available",
+    "nftHoldersCanUse": "Minterest NFT holders can use this feature",
+    "enableAsCollateral": "Use this asset as a collateral for borrowing.",
+    "infiniteApproval": "Save on gas fees for next operations by allowing Minterest protocol to handle any amount of your asset.",
+    "turnOnGovernanceRewards": "Minterest uses 100% of fee’s captured, to buy back MINTY token from the market.\nThese tokens are distributed among users in the form of Governance rewards.\nTo learn more please read our FAQ guide"
+  },
+  "transactionHistory": {
+    "columns": {
+      "amount": "Amount",
+      "dateTime": "Date - Time",
+      "dateTimeMobile": "Date - Time",
+      "marketName": "Market",
+      "transactionID": "Transaction ID",
+      "transactionIDMobile": "ID",
+      "type": "Type"
+    },
+    "noRows": "You have no transactions yet. Your transaction history will appear here once you make a transaction.",
+    "types": {
+      "autoRepay": "Liquidation (Repay)",
+      "borrow": "Borrow",
+      "invalid": "Invalid",
+      "lend": "Supply",
+      "redeem": "Withdraw",
+      "repay": "Repay",
+      "seize": "Liquidation (Seize)",
+      "transferIn": "Transfer(Received)",
+      "transferOut": "Transfer(Sent)"
+    }
+  },
+  "withdrawMnt": {
+    "footer": {
+      "title": "Please select from which contract you want to withdraw."
+    },
+    "title": "Withdraw"
+  },
+  "liquidationNotification": {
+    "title": "Liquidation",
+    "description": "Your position has been liquidated due to insolvency. You can see current state of your position on the Dashboard."
+  }
+}
