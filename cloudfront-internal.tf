@@ -1,4 +1,4 @@
-resource "aws_cloudfront_distribution" "default" {
+resource "aws_cloudfront_distribution" "internal" {
   origin {
     domain_name = aws_s3_bucket.default.bucket_regional_domain_name
     origin_id   = aws_s3_bucket.default.bucket
@@ -48,10 +48,10 @@ resource "aws_cloudfront_distribution" "default" {
 
   enabled             = true
   is_ipv6_enabled     = true
-  default_root_object = "index.html"
-  comment             = "${var.application}-${var.environment}"
+  default_root_object = "main.html"
+  comment             = "${var.application}-${var.environment}-internal"
 
-  aliases = [local.url]
+  aliases = [local.internal_url]
 
   default_cache_behavior {
     allowed_methods            = ["GET", "HEAD"]
@@ -71,23 +71,17 @@ resource "aws_cloudfront_distribution" "default" {
       cookies {
         forward = "none"
       }
-
-      headers = [
-        "CloudFront-Viewer-Country",
-        "CloudFront-Viewer-Country-Region",
-        "CloudFront-Viewer-Country-Region-Name",
-      ]
     }
 
     lambda_function_association {
-      event_type   = "origin-request"
+      event_type   = "viewer-request"
       include_body = false
-      lambda_arn   = var.unsupporter_countries_ip_blocker_lambda_arn
+      lambda_arn   = var.auth_proxy_lambda_arn
     }
   }
 
   ordered_cache_behavior {
-    path_pattern               = "/index.html"
+    path_pattern               = "/main.html"
     allowed_methods            = ["GET", "HEAD"]
     cached_methods             = ["GET", "HEAD"]
     target_origin_id           = aws_s3_bucket.default.bucket
@@ -105,18 +99,12 @@ resource "aws_cloudfront_distribution" "default" {
       cookies {
         forward = "none"
       }
-
-      headers = [
-        "CloudFront-Viewer-Country",
-        "CloudFront-Viewer-Country-Region",
-        "CloudFront-Viewer-Country-Region-Name",
-      ]
     }
 
     lambda_function_association {
-      event_type   = "origin-request"
+      event_type   = "viewer-request"
       include_body = false
-      lambda_arn   = var.unsupporter_countries_ip_blocker_lambda_arn
+      lambda_arn   = var.auth_proxy_lambda_arn
     }
   }
 
@@ -192,6 +180,7 @@ resource "aws_cloudfront_distribution" "default" {
     }
   }
 
+
   ordered_cache_behavior {
     path_pattern     = "/api/*"
     allowed_methods  = ["HEAD", "DELETE", "POST", "GET", "OPTIONS", "PUT", "PATCH"]
@@ -235,12 +224,12 @@ resource "aws_cloudfront_distribution" "default" {
   }
 
   # Allows passing the control of the URL addresses managed on frontend to React Router
-  # A document which doesn't exist on s3 will be resolved into /index.html for UI to handle routing
+  # A document which doesn't exist on s3 will be resolved into /main.html for UI to handle routing
   custom_error_response {
     error_caching_min_ttl = 300
     error_code            = 403
     response_code         = 200
-    response_page_path    = "/index.html"
+    response_page_path    = "/main.html"
   }
 
   restrictions {
@@ -252,7 +241,7 @@ resource "aws_cloudfront_distribution" "default" {
   web_acl_id = var.ddos_protection_web_acl_id
 
   viewer_certificate {
-    acm_certificate_arn = var.com_domain_certificate_arn
+    acm_certificate_arn = var.domain_certificate_arn
     ssl_support_method  = "sni-only"
   }
 }

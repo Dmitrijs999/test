@@ -1,5 +1,6 @@
 locals {
-  url               = "merge-mantle.${var.environment}.${var.main_domain}"
-  default_cache_ttl = 86400  # 1 day for non-prod environment
-  max_cache_ttl     = 604800 # 1 week for non-prod environment
+  url               = "mantle.minterest.com"
+  internal_url      = "mantle.prod.minterest.xyz"
+  default_cache_ttl = 2592000  # 1 month
+  max_cache_ttl     = 31536000 # 1 year
 }

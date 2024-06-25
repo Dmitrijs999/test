@@ -5,7 +5,7 @@ resource "aws_cloudfront_response_headers_policy" "static_cache" {
     items {
       header   = "Cache-Control"
       override = true
-      value    = "max-age=${local.max_cache_ttl}" # 1 week for non-prod environment
+      value    = "max-age=${local.max_cache_ttl}"
     }
   }
 
@@ -26,5 +26,4 @@ resource "aws_cloudfront_response_headers_policy" "content_security" {
       override                = true
     }
   }
-
 }

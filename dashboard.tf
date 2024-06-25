@@ -30,6 +30,7 @@ resource "aws_cloudwatch_dashboard" "main" {
         "type" : "metric",
         "properties" : {
           "metrics" : [
+            ["AWS/ApiGateway", "Count", "ApiId", "${var.poffchainer_gateway_id}", { "label" : "Poffchainer" }],
             ["AWS/ApplicationELB", "RequestCount", "TargetGroup", "${var.indexer_api_tg_arn_suffix}", "LoadBalancer", "${var.indexer_api_lb_arn_suffix}", { "label" : "Indexer API" }]
           ],
           "view" : "timeSeries",
@@ -49,6 +50,8 @@ resource "aws_cloudwatch_dashboard" "main" {
         "type" : "metric",
         "properties" : {
           "metrics" : [
+            ["AWS/ApiGateway", "4xx", "ApiId", "${var.poffchainer_gateway_id}", { "color" : "#bcbd22", "label" : "Poffchainer 4xx" }],
+            [".", "5xx", ".", ".", { "color" : "#ff9896", "label" : "Poffchainer 5xx" }],
             ["AWS/ApplicationELB", "HTTPCode_Target_4XX_Count", "TargetGroup", "${var.indexer_api_tg_arn_suffix}", "LoadBalancer", "${var.indexer_api_lb_arn_suffix}", { "label" : "Indexer API 4xx", "color" : "#f89256" }],
             [".", "HTTPCode_Target_5XX_Count", ".", ".", ".", ".", { "label" : "Indexer API 5xx" }]
           ],
@@ -75,6 +78,7 @@ resource "aws_cloudwatch_dashboard" "main" {
             "arn:aws:cloudwatch:${var.aws_region}:${var.aws_account_id}:alarm:indexer-api-${var.environment} - Healthy hosts count",
             "arn:aws:cloudwatch:${var.aws_region}:${var.aws_account_id}:alarm:indexer-scrapper-${var.environment} - Too few blocks scrapped",
             "arn:aws:cloudwatch:${var.aws_region}:${var.aws_account_id}:alarm:indexer-scrapper-${var.environment} - Too many errors",
+            "arn:aws:cloudwatch:${var.aws_region}:${var.aws_account_id}:alarm:poffchainer-${var.environment} - Too many errors",
             "arn:aws:cloudwatch:${var.aws_region}:${var.aws_account_id}:alarm:indexer-scrapper-${var.environment} - Block time hanlding too long",
             "arn:aws:cloudwatch:${var.aws_region}:${var.aws_account_id}:alarm:indexer-api-${var.environment} - High memory utilization",
           ]
@@ -88,6 +92,19 @@ resource "aws_cloudwatch_dashboard" "main" {
         "type" : "log",
         "properties" : {
           "query" : "SOURCE '/aws/ecs/indexer-api-${var.environment}' | fields @timestamp, @message\n| sort @timestamp desc\n| limit 20",
+          "region" : "${var.aws_region}",
+          "stacked" : false,
+          "view" : "table"
+        }
+      },
+      {
+        "height" : 5,
+        "width" : 21,
+        "y" : 18,
+        "x" : 0,
+        "type" : "log",
+        "properties" : {
+          "query" : "SOURCE '/aws/lambda/poffchainer-${var.environment}' | fields @timestamp, @message\n| sort @timestamp desc\n| limit 20",
           "region" : "${var.aws_region}",
           "stacked" : false,
           "view" : "table"
